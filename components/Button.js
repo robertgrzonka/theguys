@@ -26,7 +26,7 @@ const Button = props => (
         cursor: pointer;
         border-radius: 5px;
         display: inline-block;
-        margin: 0px 5px;
+        margin: 5px 5px;
         transition: all 0.7s;
       }
     `}</style>

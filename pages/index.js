@@ -9,10 +9,10 @@ import Span from '../components/Span'
 export default () => (
   <div>
     <Head />
-    <StyledHeader text={'StyledHeader'}/>
+    <StyledHeader text={'StyledHeader'} />
 
-    <Blockquote>
-  StyledHeaders can by styled with <u>any</u> valid css-in-js like tag. For example you can set <u>fontWeight</u> or <u>textAlign</u>. In examples below we set margin and padding to 0 with props.margin and props.padding.
+    <Blockquote boxShadow={'none'}>
+  StyledHeaders can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g. <Code>fontWeight</Code>). In examples below we set margin and padding to 0 with <Code>props.margin</Code> and <Code>props.padding</Code>.
     </Blockquote>
 
     <StyledHeader fontWeight={100} color={'crimson'} fontSize={'1.3em'} margin={0} padding={0} text={'Hey, I am styled!'} />
@@ -23,6 +23,7 @@ export default () => (
 
     <StyledHeader children='Buttons' />
 
+    <StyledHeader text='Examples:' fontSize='1em' />
     <Button backgroundColor={'lightpink'} href='https://theguys.design'>Lightpink</Button>
     <Button backgroundColor={'palevioletred'}>Palevioletred</Button>
     <Button backgroundColor={'royalblue'}>Royalblue</Button>
@@ -30,14 +31,19 @@ export default () => (
     <Button backgroundColor={'#EEBC1D'}>Gold</Button>
     <Button backgroundColor={'crimson'}>Crimson</Button>
     <Button backgroundColor={'darkcyan'}>Darkcyan</Button>
+
     <hr />
+
     <StyledHeader>
       Cards.
     </StyledHeader>
+
     <hr />
+
     <StyledHeader>
       Blockquotes.
     </StyledHeader>
+    <StyledHeader text='Examples:' fontSize='1em' />
     <Blockquote
       header='Lorem Ipsum'
       msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque. Condimentum vitae sapien pellentesque habitant. Dolor purus non enim praesent. Odio ut sem nulla pharetra diam sit amet. Aliquam ut porttitor leo a diam sollicitudin tempor id. Pretium aenean pharetra magna ac. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Libero volutpat sed cras ornare arcu dui. Ultrices eros in cursus turpis. Vel turpis nunc eget lorem dolor sed. Maecenas accumsan lacus vel facilisis volutpat est velit. Vestibulum morbi blandit cursus risus at ultrices mi.'
@@ -71,9 +77,10 @@ export default () => (
     <StyledHeader>
       Others
     </StyledHeader>
-<Code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque. Condimentum vitae sapien pellentesque habitant. Dolor purus non enim praesent. Odio ut sem nulla pharetra diam sit amet. Aliquam ut porttitor leo a diam sollicitudin tempor id. Pretium aenean pharetra magna ac. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Libero volutpat sed cras ornare arcu dui. Ultrices eros in cursus turpis. Vel turpis nunc eget lorem dolor sed. Maecenas accumsan lacus vel facilisis volutpat est velit. Vestibulum morbi blandit cursus risus at ultrices mi.</Code>
-<Separator />
-<p>Word <Span color={'red'}>blabla</Span> was styled with Span which takes only color as a props.</p>
+    <Blockquote>
+      Word <Span color={'red'}>blabla</Span> was styled with Span which takes only color as a props.
+    </Blockquote>
+    <Separator />
     <style jsx global>{`
       body {
         margin: 5% 10%;
@@ -81,7 +88,7 @@ export default () => (
         justify-content: center;
         align-content: center;
         align-items: center;
-        font-size: 18px;
+        font-size: 16px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Color Emoji";
         }
