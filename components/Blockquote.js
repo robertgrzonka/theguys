@@ -1,23 +1,27 @@
-const Blockquote = (props, color) => (
+const Blockquote = props => (
   <div>
     <blockquote>
-      <p style={{ fontSize: '1.5em', fontWeight: 100 }}>{props.header}</p>
-      <p style={{ fontSize: '1em', fontWeight: 100 }}>{props.msg}</p>
+      <p style={{ fontSize: '1.2rem', fontWeight: 500 }}>{props.header}</p>
+      <p style={{ fontSize: '1rem', fontWeight: 300 }}>{props.msg || props.children}</p>
     </blockquote>
     <style jsx>{`
+
   blockquote {
-    margin: 30px 0px 30px 0px;
-    padding: 5px 20px 10px 20px;
-    display: block;
-    border-radius: 5px;
-    background-color: whitesmoke;
+    font-size: 1rem;
+    lineHeight: 2rem;
+    margin: 20px 0px;
+    padding: 10px 50px;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: whitesmoke
   }
+
   blockquote {
-    color: ${props.color ? props.color : '#404040'};
-    box-shadow: 0px 0px 5px ${props.color ? props.color : '#404040'};
-    border: 0.01em solid ${props.color ? props.color : '#404040'};
-    border-left: 20px solid ${props.color ? props.color : '#404040'};
+    color: ${props.color ? props.color : 'black'};
+    box-shadow: 0px 1px 5px ${props.color ? props.color : 'black'};
+    border-top: 15px solid ${props.color ? props.color : 'black'};
   }
+
   `}</style>
   </div>
 )

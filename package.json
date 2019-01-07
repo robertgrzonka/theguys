@@ -13,5 +13,9 @@
   },
   "devDependencies": {
     "react-devtools": "^3.4.3"
+  },
+  "scripts": {
+    "dev": "react-devtools",
+    "next": "next"
   }
 }

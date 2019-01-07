@@ -1,12 +1,12 @@
-const StyledHeader = ({ fontWeight, color, fontSize, children }) => (
-  <p style={{ fontWeight, color, fontSize }}>
-    {children}
+const StyledHeader = props => (
+  <p style={props}>
+    {props.text}
+    {props.children}
     <style jsx>{`
     p {
       font-weight: 100;
-      color: #404040;
-      font-size: 28px;
-      padding-bottom: 10px;
+      color: rgb(40,40,40);
+      font-size: 2.5em;
       }
   `}</style>
   </p>
