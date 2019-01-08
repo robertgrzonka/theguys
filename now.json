@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [{
+    "src": "next.config.js",
+    "use": "@now/next"
+  }],
+  "alias": [
+    "theguys.design",
+    "design.theguys.sh"
+  ]
+}

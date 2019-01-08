@@ -7,6 +7,7 @@ import Code from '../components/Code'
 import Separator from '../components/Separator'
 import Input from '../components/Form'
 import Component from '../components/Component'
+import Image from '../components/Image'
 
 const Example = () => <StyledHeader
   text='Examples:'
@@ -20,16 +21,31 @@ const Example = () => <StyledHeader
 
 export default () => (
   <Body>
-
-    <StyledHeader
-      text={'theGuys.design'}
-      fontFamily={'"Playfair Display", "Cormorant Garamond", "Times", serif'}
-      textAlign={'center'}
-      fontSize={'3.5rem'}
-      fontWeight={100}
-      color={'darkcyan'}
-      margin={'20vh 0 0 0'}
-      lineHeight={'50px'}
+    <Image
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center'
+      }}
+      svgStyle={{
+        minWidth: '25%',
+        maxWidth: '40%',
+        margin: '10vh 10vw'
+      }}
+      backgroundStyle={{
+        backgroundImage: 'url(./static/dots.png)',
+        backgroundSize: '5%',
+        backgroundRepeat: 'repeat',
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        opacity: '0.3',
+        zIndex: '-1',
+        overflow: 'hidden'
+      }}
+      src='../static/theguysdesign.svg'
     />
 
     <StyledHeader
@@ -46,7 +62,7 @@ export default () => (
 
     <Component text='StyledHeaders'>
 
-      <Blockquote boxShadow='none'>
+      <Blockquote>
         StyledHeaders can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g. <Code>fontWeight</Code>). In examples below we set margin and padding to 10px with <Code>props.margin</Code> and <Code>props.padding</Code>.
       </Blockquote>
 
@@ -146,13 +162,16 @@ export default () => (
         font-size: 16px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
         Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Color Emoji";
+        text-rendering: optimizeLegibility;
+        white-space: nowrap;
+        overflow-wrap: break-word;
+-webkit-font-smoothing: antialiased;
     }
         p {
           line-height: 1.45;
           font-size: 1rem;
           letter-spacing: 0.0625rem;
           text-align: justify;
-          overflow-wrap: break-word;
         }
         `}
     </style>
