@@ -1,13 +1,11 @@
-import Body from '../components/Body'
+import Layout from '../components/Layout'
 import StyledHeader from '../components/StyledHeader'
-import Head from '../components/Head'
 import Button from '../components/Button'
 import Blockquote from '../components/Blockquote'
 import Code from '../components/Code'
 import Separator from '../components/Separator'
 import Input from '../components/Form'
 import Component from '../components/Component'
-import Footer from '../components/Footer'
 
 const Example = () => <StyledHeader
   text='Examples:'
@@ -20,7 +18,7 @@ const Example = () => <StyledHeader
 />
 
 export default () => (
-  <Body>
+  <Layout>
 
     <StyledHeader
       text='theGuys.design'
@@ -29,25 +27,22 @@ export default () => (
       fontSize='3.5rem'
       fontWeight='100'
       color='black'
-      margin='10vh 0 30px 0'
+      margin='10vh 0 0 0'
     />
 
     <StyledHeader
-      text={'mini UI React library'}
-      fontVariantCaps={'all-small-caps'}
-      textAlign={'center'}
-      fontWeight={100}
-      color={'rgba(0,0,0,1)'}
-      margin={'0 0 20vh 0'}
+      text='mini UI React library'
+      fontVariantCaps='all-small-caps'
+      textAlign='center'
+      fontWeight='100'
+      color='rgba(0,0,0,1)'
+      margin='0 0 20vh 0'
     />
-
-    <Head />
 
     <Component text='StyledHeaders'>
       <Blockquote boxShadow='none'>
         StyledHeaders can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g.{' '}
-        <Code>fontWeight</Code>).
-        In examples below we set margin and padding to 10px with <Code>props.margin</Code> and <Code>props.padding</Code>.
+        <Code>fontWeight</Code> or <Code>textAlign</Code> etc.).
       </Blockquote>
 
       <Example />
@@ -60,7 +55,7 @@ export default () => (
       <StyledHeader
         fontSize='1.1rem'
         textAlign='right'
-        text={'This one is smaller and aligned to right.'}
+        text='This one is smaller and aligned to right.'
       />
     </Component>
 
@@ -76,27 +71,27 @@ export default () => (
       <Button color={'darkcyan'}>Darkcyan</Button>
 
       <Separator />
-      <StyledHeader text='Outline buttons:' fontSize={'1em'} />
+      <StyledHeader text='Outline buttons:' fontSize='1em' />
       <Button outline>Default</Button>
-      <Button color={'lightpink'} outline>
+      <Button color='lightpink' outline>
     Lightpink
       </Button>
-      <Button color={'palevioletred'} outline>
+      <Button color='palevioletred' outline>
     Palevioletred
       </Button>
-      <Button color={'royalblue'} outline>
+      <Button color='royalblue' outline>
     Royalblue
       </Button>
-      <Button color={'#EEBC1D'} outline>
+      <Button color='#EEBC1D' outline>
     Gold
       </Button>
-      <Button color={'lightseagreen'} outline>
+      <Button color='lightseagreen' outline>
     Lightseagreen
       </Button>
-      <Button color={'crimson'} outline>
+      <Button color='crimson' outline>
     Crimson
       </Button>
-      <Button color={'darkcyan'} outline>
+      <Button color='darkcyan' outline>
     Darkcyan
       </Button>
     </Component>
@@ -144,41 +139,5 @@ export default () => (
       <Input name='Input' />
     </Component>
 
-    <Footer />
-
-    <style jsx global>
-      {`
-    @media (min-width: 750px) {
-      body {
-        margin: 5vh 15vw;
-      }
-      button {
-        margin: 10px;
-      }
-    }
-    @media (max-width: 750px) {
-      body {
-        margin: 20px 50px;
-      }
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      font-size: 14px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-        'Segoe UI Emoji', 'Segoe UI Symbol', 'Color Emoji';
-    }
-    p {
-      line-height: 1.3rem;
-      font-size: 1rem;
-      letter-spacing: 0.0625;
-      text-align: justify;
-      overflow-wrap: break-word;
-    }
-  `}
-    </style>
-  </Body>
+  </Layout>
 )
