@@ -14,6 +14,7 @@ const Blockquote = props => (
     display: inline-block;
     border-radius: 3px;
     background-color: whitesmoke
+    z-index: 1;
   }
 
   blockquote {

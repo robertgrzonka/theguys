@@ -5,8 +5,8 @@ const StyledHeader = props => (
     <style jsx>{`
     p {
       font-weight: 100;
-      color: rgb(40,40,40);
-      font-size: 2.5em;
+      color: rgb(20,20,20);
+      font-size: 1.5rem;
       }
   `}</style>
   </p>
