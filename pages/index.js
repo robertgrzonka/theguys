@@ -7,7 +7,7 @@ import Code from '../components/Code'
 import Separator from '../components/Separator'
 import Input from '../components/Form'
 import Component from '../components/Component'
-import Image from '../components/Image'
+import Footer from '../components/Footer'
 
 const Example = () => <StyledHeader
   text='Examples:'
@@ -21,59 +21,50 @@ const Example = () => <StyledHeader
 
 export default () => (
   <Body>
-    <Image
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center'
-      }}
-      svgStyle={{
-        minWidth: '25%',
-        maxWidth: '40%',
-        margin: '10vh 10vw'
-      }}
-      backgroundStyle={{
-        backgroundImage: 'url(./static/dots.png)',
-        backgroundSize: '5%',
-        backgroundRepeat: 'repeat',
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        opacity: '0.3',
-        zIndex: '-1',
-        overflow: 'hidden'
-      }}
-      src='../static/theguysdesign.svg'
+
+    <StyledHeader
+      text='theGuys.design'
+      fontFamily='"Cormorant Garamond", serif'
+      textAlign='center'
+      fontSize='3.5rem'
+      fontWeight='100'
+      color='black'
+      margin='10vh 0 30px 0'
     />
 
     <StyledHeader
       text={'mini UI React library'}
-      margin={'0 0 20vh 0'}
       fontVariantCaps={'all-small-caps'}
       textAlign={'center'}
-      fontSize={'2rem'}
       fontWeight={100}
       color={'rgba(0,0,0,1)'}
+      margin={'0 0 20vh 0'}
     />
 
     <Head />
 
     <Component text='StyledHeaders'>
-
-      <Blockquote>
-        StyledHeaders can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g. <Code>fontWeight</Code>). In examples below we set margin and padding to 10px with <Code>props.margin</Code> and <Code>props.padding</Code>.
+      <Blockquote boxShadow='none'>
+        StyledHeaders can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g.{' '}
+        <Code>fontWeight</Code>).
+        In examples below we set margin and padding to 10px with <Code>props.margin</Code> and <Code>props.padding</Code>.
       </Blockquote>
 
       <Example />
       <StyledHeader text={'This header is default.'} />
-      <StyledHeader fontWeight='500' color='blue' text='This one is bolder and blue.' />
-      <StyledHeader fontSize='1.1rem' textAlign='right' text={'This one is smaller and aligned to right.'} />
+      <StyledHeader
+        fontWeight='500'
+        color='blue'
+        text='This one is bolder and blue.'
+      />
+      <StyledHeader
+        fontSize='1.1rem'
+        textAlign='right'
+        text={'This one is smaller and aligned to right.'}
+      />
     </Component>
 
     <Component text='Buttons'>
-
       <Example />
       <Button>Default</Button>
       <Button color={'lightpink'}>Lightpink</Button>
@@ -87,13 +78,27 @@ export default () => (
       <Separator />
       <StyledHeader text='Outline buttons:' fontSize={'1em'} />
       <Button outline>Default</Button>
-      <Button color={'lightpink'} outline>Lightpink</Button>
-      <Button color={'palevioletred'} outline>Palevioletred</Button>
-      <Button color={'royalblue'} outline>Royalblue</Button>
-      <Button color={'#EEBC1D'} outline>Gold</Button>
-      <Button color={'lightseagreen'} outline>Lightseagreen</Button>
-      <Button color={'crimson'} outline>Crimson</Button>
-      <Button color={'darkcyan'} outline>Darkcyan</Button>
+      <Button color={'lightpink'} outline>
+    Lightpink
+      </Button>
+      <Button color={'palevioletred'} outline>
+    Palevioletred
+      </Button>
+      <Button color={'royalblue'} outline>
+    Royalblue
+      </Button>
+      <Button color={'#EEBC1D'} outline>
+    Gold
+      </Button>
+      <Button color={'lightseagreen'} outline>
+    Lightseagreen
+      </Button>
+      <Button color={'crimson'} outline>
+    Crimson
+      </Button>
+      <Button color={'darkcyan'} outline>
+    Darkcyan
+      </Button>
     </Component>
 
     <Component text='Cards'>
@@ -101,7 +106,6 @@ export default () => (
     </Component>
 
     <Component text='Blockquotes'>
-
       <Example />
       <Blockquote
         header='Lorem Ipsum'
@@ -140,11 +144,14 @@ export default () => (
       <Input name='Input' />
     </Component>
 
-    <style jsx global>{`
+    <Footer />
+
+    <style jsx global>
+      {`
     @media (min-width: 750px) {
       body {
         margin: 5vh 15vw;
-        }
+      }
       button {
         margin: 10px;
       }
@@ -155,25 +162,23 @@ export default () => (
       }
     }
     body {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        font-size: 16px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Color Emoji";
-        text-rendering: optimizeLegibility;
-        white-space: nowrap;
-        overflow-wrap: break-word;
--webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Color Emoji';
     }
-        p {
-          line-height: 1.45;
-          font-size: 1rem;
-          letter-spacing: 0.0625rem;
-          text-align: justify;
-        }
-        `}
+    p {
+      line-height: 1.3rem;
+      font-size: 1rem;
+      letter-spacing: 0.0625;
+      text-align: justify;
+      overflow-wrap: break-word;
+    }
+  `}
     </style>
   </Body>
 )

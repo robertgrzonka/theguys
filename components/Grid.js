@@ -3,3 +3,5 @@ const Grid = (props) => (
     {props.children}
   </div>
 )
+
+export default Grid

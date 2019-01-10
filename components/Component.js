@@ -1,9 +1,46 @@
 import StyledHeader from './StyledHeader'
 
+const Hr = () => <hr style={{ border: '0.05em solid rgba(0,0,0,0.1)', margin: '20px 0 50px 0' }} />
+
 const Component = props => (
-  <div style={{ margin: 20, padding: 100, border: '1px solid rgba(0,0,0,0.2)', borderRadius: 5 }}>
-    <StyledHeader text={props.text} padding='0 0 0.5em 0' margin='0' borderBottom='1px solid rgba(0,0,0,0.2)' />
-    {props.children}
+  <div>
+    <div className='component-wrapper'>
+      <StyledHeader
+        text={props.text}
+        fontSize={'2em'}
+      />
+      <Hr />
+      {props.children}
+    </div>
+    <style jsx>{`
+    @media (min-width: 1200px) {
+    .component-wrapper {
+          margin: 100px 15%;
+          padding: 100px;
+          border-radius: 5px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+      @media (max-width: 1200px) {
+        .component-wrapper {
+          margin: 20px 10%;
+          padding: 50px;
+          border-radius: 5px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+      @media (max-width: 900px) {
+        .component-wrapper {
+          margin: 10px 0;
+          padding: 10px 0;
+          border: 0;
+          box-shadow: none;
+        }
+      }
+    `}</style>
   </div>
 )
 
