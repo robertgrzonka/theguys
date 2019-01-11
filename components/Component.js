@@ -1,21 +1,20 @@
 import StyledHeader from './StyledHeader'
 
-const Hr = () => <hr style={{ border: '0.05em solid rgba(0,0,0,0.1)', margin: '20px 0 50px 0' }} />
-
 const Component = props => (
-  <div>
-    <div className='component-wrapper'>
+  <div className='component-wrapper'>
+    <div>
       <StyledHeader
         text={props.text}
-        fontSize={'2em'}
       />
-      <Hr />
-      {props.children}
+      <p>{props.p}</p>
+      <div>
+        {props.children}
+      </div>
     </div>
     <style jsx>{`
     @media (min-width: 1200px) {
     .component-wrapper {
-          margin: 5% 15%;
+          margin: 5% 20%;
           padding: 5% 7%;
           border-radius: 5px;
           border: 1px solid rgba(0, 0, 0, 0.1);

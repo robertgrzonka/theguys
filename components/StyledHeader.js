@@ -1,15 +1,15 @@
 const StyledHeader = props => (
-  <p style={props}>
+  <h1 style={props}>
     {props.text}
-    {props.children}
     <style jsx>{`
-    p {
-      font-weight: 100;
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
       color: rgb(20,20,20);
-      font-size: 1.5rem;
+      margin: 10px 0 20px 0;
       }
   `}</style>
-  </p>
+  </h1>
 )
 
 export default StyledHeader

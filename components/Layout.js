@@ -17,19 +17,22 @@ export default (props) => (
     <style jsx global>{`
     @media (min-width: 1200px) {
       body {
-        margin: 3vh 10vw;
+        margin: 3vh 7vw;
       }
     }
+
     @media (max-width: 1200px) {
       body {
-        margin: 5vh 5vw;
+        margin: 2vh 3vw;
       }
     }
+
     @media (max-width: 900px) {
       body {
-        margin: 20px 50px;
+        margin: 10px 30px;
       }
     }
+
     body {
       display: flex;
       justify-content: center;
@@ -40,14 +43,15 @@ export default (props) => (
         'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
         'Segoe UI Emoji', 'Segoe UI Symbol', 'Color Emoji';
     }
+
     button {
         margin: 10px;
       }
+
     p {
       line-height: 1.4;
-      font-size: 1rem;
-      font-weight: 100;
-      letter-spacing: 0.0625;
+      font-weight: 300;
+      letter-spacing: 0.0625rem;
       text-align: justify;
       overflow-wrap: break-word;
     }
