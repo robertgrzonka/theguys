@@ -1,14 +1,19 @@
 <div align="center">
-<img src="./static/theguysdesign.svg" width="200px">
+<br>
+<br>
+<img src="./static/theguysdesign.svg" width="300px">
+<br>
+<br>
 
-> Public code from [theguys.design](https://theguys.design)
+> React UI components for [theGuys™ design](https://theguys.design)
+
 </div>
 
 # Table of contents
 - [Table of contents](#table-of-contents)
   - [Layout](#layout)
   - [Structure](#structure)
-  - [**Design**](#design)
+  - [Design](#design)
   - [Join us!](#join-us)
   - [License](#license)
   
@@ -16,7 +21,7 @@
 
 ## Structure
 
-## **Design**
+## Design
 
 ## Join us!
 
