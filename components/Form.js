@@ -7,25 +7,21 @@ class Input extends React.Component {
       placeholder: 'Write something here.',
       value: ''
     }
-
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-
   handleChange (event) {
     this.setState({
       placeholder: '',
       value: event.target.value
     })
   }
-
   handleSubmit (eventSubmit) {
     eventSubmit.preventDefault()
     this.setState({
       value: ''
     })
   }
-
   render () {
     return (
       <div>

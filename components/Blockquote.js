@@ -5,16 +5,16 @@ const Blockquote = props => (
     <style jsx>{`
 
   blockquote {
-    margin: 5%;
-    padding: 10px 30px 20px 30px;
+    margin: 50px 0px;
+    padding: 10px 20px 20px 20px;
     display: block;
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: white;
   }
 
   blockquote {
     color: ${props.color ? props.color : 'black'};
-    box-shadow: 0px 2px 5px ${props.color ? props.color : 'black'};
+    box-shadow: 0px 1px 5px ${props.color ? props.color : 'black'};
     border-top: 15px solid ${props.color ? props.color : 'black'};
   }
 

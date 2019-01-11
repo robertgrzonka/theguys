@@ -10,6 +10,7 @@ export default (props) => (
       <link rel='stylesheet' type='text/css' href='/components/style.css' />
     </Head>
     <script src='http://localhost:8097' />
+    {/* react-devtools | for development only */}
     <Body>
       {props.children}
       <Footer />
@@ -17,13 +18,13 @@ export default (props) => (
     <style jsx global>{`
     @media (min-width: 1200px) {
       body {
-        margin: 3vh 7vw;
+        margin: 3vh 5vw;
       }
     }
 
     @media (max-width: 1200px) {
       body {
-        margin: 2vh 3vw;
+        margin: 5vh 7vw;
       }
     }
 

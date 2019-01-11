@@ -56,32 +56,19 @@ export default () => (
         <Button color={'lightseagreen'}>Lightseagreen</Button>
         <Button color={'crimson'}>Crimson</Button>
         <Button color={'darkcyan'}>Darkcyan</Button>
+        <Button large>Large</Button>
       </Examples>
 
       <Examples text='Outline buttons'>
         <Button outline>Default</Button>
-        <Button color='lightpink' outline>
-          Lightpink
-        </Button>
-        <Button color='palevioletred' outline>
-          Palevioletred
-        </Button>
-        <Button color='royalblue' outline>
-          Royalblue
-        </Button>
-        <Button color='#EEBC1D' outline>
-          Gold
-        </Button>
-        <Button color='lightseagreen' outline>
-          Lightseagreen
-        </Button>
-        <Button color='crimson' outline>
-          Crimson
-        </Button>
-        <Button color='darkcyan' outline>
-          Darkcyan
-        </Button>
-        <Button large>Large</Button>
+        <Button color='lightpink' outline>Lightpink</Button>
+        <Button color='palevioletred' outline>Palevioletred</Button>
+        <Button color='royalblue' outline>Royalblue</Button>
+        <Button color='#EEBC1D' outline>Gold</Button>
+        <Button color='lightseagreen' outline>Lightseagreen</Button>
+        <Button color='crimson' outline>Crimson</Button>
+        <Button color='darkcyan' outline>Darkcyan</Button>
+        <Button large outline>Large</Button>
       </Examples>
     </Component>
 

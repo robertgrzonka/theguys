@@ -8,13 +8,11 @@ export default class Title extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
   }
-
   handleChange () {
     this.setState({
       isOpen: !this.state.isOpen
     })
   }
-
   render () {
     return (
       <div>
@@ -26,7 +24,6 @@ export default class Title extends React.Component {
           {this.props.children}
         </div>
         <style jsx>{`
-
     h2 {
       font-variant-caps: all-small-caps;
       color: ${this.state.isOpen
@@ -53,13 +50,22 @@ export default class Title extends React.Component {
     }
 
     .examples {
-      padding: 10px;
-      border: 1px solid slategray;
+      padding: 50px;
+      border: 1px solid rgb(240,240,240);
       border-radius: 5px;
-      background-color: whitesmoke;
+      background-color: rgb(250,250,250);
       display: ${this.state.isOpen ? 'block' : 'none'};
       transition: all 0.4s;
     }
+    @media (max-width: 900px) {
+      .examples {
+        padding: 20px;
+        margin: 0;
+        border: 1px solid rgb(240,240,240);
+        background-color: rgb(250,250,250);
+      }
+    }
+
     `}</style>
       </div>
     )

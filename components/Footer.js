@@ -1,20 +1,40 @@
 import Link from 'next/link'
 
+const wrapperStyles = {
+  margin: '7% 0 7% 0',
+  textAlign: 'center'
+}
+
+const imgStyles = {
+  minWidth: '150px',
+  maxWidth: '15%',
+  marginBottom: 0
+}
+
+const pStyles = {
+  fontSize: '0.9rem',
+  textAlign: 'center',
+  marginBottom: 0
+}
+
 const Footer = () => (
-  <div style={{ margin: '7% 0 7% 0', textAlign: 'center' }}>
-    <img src='/static/theguysdesign.svg' style={{ minWidth: '10%', maxWidth: '15%', marginBottom: 0 }} />
-    <p style={{ fontSize: '1rem', textAlign: 'center', marginBottom: 0 }}>2018 ©{' '}
+  <div style={wrapperStyles}>
+    <img src='/static/theguysdesign.svg' style={imgStyles} />
+    <p style={pStyles}>2018 ©{' '}
       <Link href='https://theguys.design'>
         <a>theGuys by Robert Grzonka</a>
       </Link>
       <style jsx>{`
-        a {
+        a:link, a:visited {
           text-decoration: none;
-          color: palevioletred;
+          color: rgba(216, 112, 147, 0.7);
           transition: 0.4s color;
         }
         a:hover {
-          color: 'rgba(216, 112, 147, 0.7)';
+          color: palevioletred;
+        }
+        a:active {
+          color: deeppink;
         }
         `}</style>
     </p>
