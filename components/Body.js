@@ -8,6 +8,7 @@ const Body = (props) => (
         display: flex;
         width: 100%;
         justify-content: center;
+        align-items: center;
       }
       `}</style>
   </div>
