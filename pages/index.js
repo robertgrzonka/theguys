@@ -10,17 +10,16 @@ import Subtitle from '../components/Subtitle'
 
 export default () => (
   <Layout>
-
     <StyledHeader
-      text='theGuys design'
-      fontFamily='serif'
+      text='theGuys ‣ design'
+      fontFamily='Cormorant Garamond'
       textAlign='center'
       fontSize='3rem'
       fontWeight='900'
       color='black'
-      margin='10vh 0 0 0'
+      margin='5vh 0 0 0'
+      letterSpacing='0.2rem'
     />
-
     <Subtitle
       text='mini UI React library'
       textAlign='center'
@@ -31,17 +30,20 @@ export default () => (
         StyledHeaders can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g.{' '}
         <Code>fontWeight</Code> or <Code>textAlign</Code> etc.).
       </Blockquote>
-
       <Examples text='Examples'>
-        <StyledHeader text={'This header is default.'} />
+        <StyledHeader text={'Deafault header'} />
         <StyledHeader
-          fontWeight='500'
-          color='blue'
-          text='This one is bolder and blue.'
+          fontWeight='100'
+          textAlign='center'
+          color='palevioletred'
+          text='Lighter, centered and pink.'
         />
         <StyledHeader
           textAlign='right'
-          text='This one is aligned to right.'
+          fontWeight='100'
+          fontSize='1.4rem'
+          fontStyle='oblique'
+          text='Aligned to right, oblique, smaller'
         />
       </Examples>
     </Component>

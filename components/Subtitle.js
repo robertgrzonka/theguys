@@ -1,18 +1,14 @@
-const Subtitle = props => (
-  <div>
-    <h2>{props.text}</h2>
-    <style jsx>{`
-    h2 {
-      color: black;
-      margin: 2% 0px 10% 0px;
-      font-weight: 100;
-      letter-spacing: 0.08rem;
-      text-align: center;
-      font-variant-caps: all-small-caps;
-      font-size: 1.5rem;
-    }
-  `}</style>
-  </div>
-)
+const h2 = {
+  color: 'black',
+  margin: '1% 0px 10% 0px',
+  fontWeight: '100',
+  letterSpacing: '0.5rem',
+  textAlign: 'center',
+  fontSize: '1.7rem',
+  fontVariantCaps: 'all-small-caps',
+  fontVariantPosition: 'super'
+}
+
+const Subtitle = props => <h2 style={h2}>{props.text}</h2>
 
 export default Subtitle

@@ -75,4 +75,4 @@ available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.ht
 [theGuys by Robert Grzonka][gl/theguys] © 2018 
 
 [homepage]: https://www.contributor-covenant.org
-[gl/theguys]: https://github.com/theguysdesign
+[gl/theguys]: https://theguys.sh

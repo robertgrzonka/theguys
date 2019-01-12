@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
 const wrapperStyles = {
-  margin: '7% 0 7% 0',
+  margin: '100px',
   textAlign: 'center'
 }
 
 const imgStyles = {
-  minWidth: '150px',
+  minWidth: '200px',
   maxWidth: '15%',
   marginBottom: 0
 }

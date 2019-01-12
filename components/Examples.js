@@ -32,8 +32,8 @@ export default class Title extends React.Component {
       };
       padding: 10px 20px;
       margin: 30px 0px;
-      font-weight: 200;
-      transition: all 0.3s;
+      font-weight: 400;
+      transition: all 0.4s;
     }
 
     span {
@@ -51,18 +51,16 @@ export default class Title extends React.Component {
 
     .examples {
       padding: 50px;
-      border: 1px solid rgb(240,240,240);
       border-radius: 5px;
+      border: 1px solid rgb(230,230,230);
       background-color: rgb(250,250,250);
       display: ${this.state.isOpen ? 'block' : 'none'};
-      transition: all 0.4s;
     }
     @media (max-width: 900px) {
       .examples {
         padding: 20px;
         margin: 0;
-        border: 1px solid rgb(240,240,240);
-        background-color: rgb(250,250,250);
+        background-color: rgb(240,240,240);
       }
     }
 
