@@ -11,14 +11,14 @@ import Subtitle from '../components/Subtitle'
 export default () => (
   <Layout>
     <Header
+      text='theGuys › Design'
       textAlign='center'
       fontSize='3rem'
       fontWeight='900'
       color='black'
       margin='10px 0 0 0'
-    >
-      theGuys <span style={{ opacity: '0.7' }}>›</span> Design
-    </Header>
+    />
+
     <Subtitle
       text='React Components mini–library'
       textAlign='center'
