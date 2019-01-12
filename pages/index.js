@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import StyledHeader from '../components/StyledHeader'
+import Header from '../components/Header'
 import Button from '../components/Button'
 import Blockquote from '../components/Blockquote'
 import Code from '../components/Code'
@@ -10,38 +10,36 @@ import Subtitle from '../components/Subtitle'
 
 export default () => (
   <Layout>
-    <StyledHeader
-      text='theGuys ‣ design'
-      fontFamily='Cormorant Garamond'
+    <Header
       textAlign='center'
       fontSize='3rem'
       fontWeight='900'
       color='black'
-      margin='5vh 0 0 0'
-      letterSpacing='0.2rem'
-    />
+      margin='10px 0 0 0'
+    >
+      theGuys <span style={{ opacity: '0.7' }}>›</span> Design
+    </Header>
     <Subtitle
-      text='mini UI React library'
+      text='React Components mini–library'
       textAlign='center'
     />
 
     <Component text='Styled headers' p='Lorem ipsum solor domet.'>
       <Blockquote boxShadow='none'>
-        StyledHeaders can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g.{' '}
+        Headers can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g.{' '}
         <Code>fontWeight</Code> or <Code>textAlign</Code> etc.).
       </Blockquote>
       <Examples text='Examples'>
-        <StyledHeader text={'Deafault header'} />
-        <StyledHeader
+        <Header text={'Deafault header'} />
+        <Header
           fontWeight='100'
           textAlign='center'
           color='palevioletred'
           text='Lighter, centered and pink.'
         />
-        <StyledHeader
+        <Header
           textAlign='right'
-          fontWeight='100'
-          fontSize='1.4rem'
+          fontSize='1.5rem'
           fontStyle='oblique'
           text='Aligned to right, oblique, smaller'
         />
@@ -58,7 +56,6 @@ export default () => (
         <Button color={'lightseagreen'}>Lightseagreen</Button>
         <Button color={'crimson'}>Crimson</Button>
         <Button color={'darkcyan'}>Darkcyan</Button>
-        <Button large>Large</Button>
       </Examples>
 
       <Examples text='Outline buttons'>
@@ -70,7 +67,11 @@ export default () => (
         <Button color='lightseagreen' outline>Lightseagreen</Button>
         <Button color='crimson' outline>Crimson</Button>
         <Button color='darkcyan' outline>Darkcyan</Button>
-        <Button large outline>Large</Button>
+      </Examples>
+
+      <Examples text='Large and small'>
+        <Button large>Large</Button>
+        <Button large outline>Outline</Button>
       </Examples>
     </Component>
 

@@ -56,11 +56,12 @@ export default class Title extends React.Component {
       background-color: rgb(250,250,250);
       display: ${this.state.isOpen ? 'block' : 'none'};
     }
+
     @media (max-width: 900px) {
       .examples {
         padding: 20px;
         margin: 0;
-        background-color: rgb(240,240,240);
+        background-color: rgb(245,245,245);
       }
     }
 

@@ -1,9 +1,9 @@
-import StyledHeader from './StyledHeader'
+import Header from './Header'
 
 const Component = props => (
   <div className='component-wrapper'>
     <div>
-      <StyledHeader
+      <Header
         text={props.text}
       />
       <p>{props.p}</p>

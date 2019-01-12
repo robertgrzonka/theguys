@@ -6,11 +6,10 @@ const Body = (props) => (
     <style jsx>{`
       div.wrapper {
         display: flex;
-        width: 100%;
+        width: 100vw;
         justify-content: center;
         align-items: center;
-      }
-      `}</style>
+      }`}</style>
   </div>
 )
 
