@@ -7,11 +7,9 @@ export default (props) => (
     <Head>
       <title>theGuys › design</title>
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      <style>@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext');
-      </style>
     </Head>
-    {/* <script src='http://localhost:8097' /> */}
-    {/* react-devtools | development only */}
+    <style>@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext')
+    </style>
     <Body>
       {props.children}
       <Footer />
