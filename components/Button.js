@@ -8,8 +8,8 @@ const Button = props => (
         cursor: pointer;
         border-radius: 5px;
         background-color: black;
-        letter-spacing: 0.0625rem;
-        transition: all 0.5s;
+        letter-spacing: 0.07rem;
+        transition: all 0.3s;
       }
 
       button {
