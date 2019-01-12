@@ -1,11 +1,11 @@
 const span = {
-  fontFamily: '"Fira Mono", Inconsolata, monospace',
-  fontSize: '0.8rem',
+  fontFamily: '"Fira Mono", Menlo, Inconsolata, monospace',
+  fontSize: '0.7rem',
   fontWeight: 100,
-  backgroundColor: 'rgba(30,30,30,1)',
+  backgroundColor: 'rgba(35,35,35,1)',
   color: 'white',
-  borderRadius: 0,
-  padding: '3px 7px'
+  borderRadius: 3,
+  padding: '2px 5px'
 }
 
 const Code = props =>

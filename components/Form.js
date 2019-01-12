@@ -52,6 +52,9 @@ class Input extends React.Component {
           transition: all 0.4s;
           font-size: 1rem;
         }
+        input:focus {
+          box-shadow: 0px 0px 3px black;
+        }
         input[type='submit'] {
           cursor: pointer;
           font-weight: 300;

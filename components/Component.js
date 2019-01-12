@@ -1,9 +1,9 @@
-import StyledHeader from './StyledHeader'
+import Header from './Header'
 
 const Component = props => (
   <div className='component-wrapper'>
     <div>
-      <StyledHeader
+      <Header
         text={props.text}
       />
       <p>{props.p}</p>
@@ -12,7 +12,7 @@ const Component = props => (
       </div>
     </div>
     <style jsx>{`
-    @media (min-width: 1200px) {
+    @media (min-width: 1350px) {
     .component-wrapper {
           margin: 5% 15%;
           padding: 10%;
@@ -22,7 +22,7 @@ const Component = props => (
       }
     }
 
-      @media (max-width: 1200px) {
+      @media (max-width: 1350px) {
         .component-wrapper {
           margin: 3% 10%;
           padding: 10%;
@@ -33,8 +33,8 @@ const Component = props => (
 
       @media (max-width: 900px) {
         .component-wrapper {
-          margin: 5%;
-          padding: 5%;
+          margin: 3% 0;
+          padding: 2%;
           border: 0;
           box-shadow: none;
         }
