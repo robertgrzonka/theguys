@@ -36,11 +36,3 @@ export const Container = ({ children }) => (
     {children}
   </div>
 )
-
-export const Grid = (props) => (
-  <Container>
-    <Row>
-      {props.children}
-    </Row>
-  </Container>
-)

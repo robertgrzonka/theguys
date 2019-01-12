@@ -7,11 +7,10 @@ export default (props) => (
     <Head>
       <title>theGuys › design</title>
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      <style>@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext');
-      </style>
     </Head>
-    {/* <script src='http://localhost:8097' /> */}
-    {/* react-devtools | development only */}
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext')
+    </style>
     <Body>
       {props.children}
       <Footer />
@@ -24,7 +23,7 @@ export default (props) => (
       align-content: center;
       align-items: center;
       font-size: 14px;
-      margin: 10%;
+      margin: 10% 0px 0px 0px;
       text-rendering: optimizeLegibility;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
         'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
@@ -39,6 +38,7 @@ export default (props) => (
       letter-spacing: 0.0625rem;
       text-align: justify;
       overflow-wrap: break-word;
+      font-size: 1em;
     }
   `}</style>
   </div>

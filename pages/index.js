@@ -25,10 +25,6 @@ export default () => (
     />
 
     <Component text='Styled headers' p='Lorem ipsum solor domet.'>
-      <Blockquote boxShadow='none'>
-        Headers can by styled with <strong>any</strong> CSS value written with specific JS look-a-like <strong>camelCase</strong> (e.g.{' '}
-        <Code>fontWeight</Code> or <Code>textAlign</Code> etc.).
-      </Blockquote>
       <Examples text='Examples'>
         <Header text={'Deafault header'} />
         <Header
@@ -77,8 +73,18 @@ export default () => (
 
     <Component text='Cards' p='Lorem ipsum solor domet.' />
 
+    <Component text='Code' p='Can be used inline.'>
+      <Examples text='Examples'>
+        <p>Can be used as default HTML <kbd>kbd</kbd> tag or as a React <Code>Component</Code>.</p>
+      </Examples>
+    </Component>
+
     <Component text='Blockquotes' p='Lorem ipsum solor domet.'>
       <Examples text='Examples'>
+        <Blockquote
+          title='Styling Components'
+          msg='This is default Blockquote.'
+        />
         <Blockquote
           header='Lorem Ipsum'
           msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
