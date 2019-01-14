@@ -59,6 +59,7 @@ class Input extends React.Component {
           cursor: pointer;
           font-weight: 300;
           font-size: 1rem;
+          margin-left: 20px;
         }
         input[type='submit']:hover {
           background-color: black;

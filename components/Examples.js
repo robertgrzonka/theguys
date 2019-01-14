@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Title extends React.Component {
+export default class Examples extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -32,7 +32,7 @@ export default class Title extends React.Component {
       };
       padding: 10px 20px;
       margin: 30px 0px;
-      font-weight: 400;
+      font-weight: 300;
       transition: all 0.4s;
     }
 
@@ -52,8 +52,9 @@ export default class Title extends React.Component {
     .examples {
       padding: 50px;
       border-radius: 5px;
-      border: 1px solid rgb(230,230,230);
-      background-color: rgb(250,250,250);
+      border: 1px solid rgba(0,0,0,0.1);
+      background-color: rgb(255,255,255);
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
       display: ${this.state.isOpen ? 'block' : 'none'};
     }
 
