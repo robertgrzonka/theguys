@@ -24,7 +24,7 @@ export default () => (
       textAlign='center'
     />
 
-    <Component text='Styled headers' p='Lorem ipsum solor domet.'>
+    <Component text='Styled headers' p='Lorem ipsum solor domet.' id='headers'>
       <Examples text='Examples'>
         <Header text={'Deafault header'} />
         <Header
@@ -42,7 +42,7 @@ export default () => (
       </Examples>
     </Component>
 
-    <Component text='Buttons' p='Lorem ipsum solor domet.'>
+    <Component text='Buttons' p='Lorem ipsum solor domet.' id='buttons' key='buttons'>
       <Examples text='Examples'>
         <Button>Default</Button>
         <Button color={'lightpink'}>Lightpink</Button>

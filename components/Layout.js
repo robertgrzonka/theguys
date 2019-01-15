@@ -1,17 +1,17 @@
 import Body from '../components/Body'
 import Head from 'next/head'
 import Footer from '../components/Footer'
+import Sidebar from '../components/Sidebar'
 
 export default (props) => (
   <div>
     <Head>
       <title>theGuys › design</title>
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      <link href='https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext' rel='stylesheet' />
     </Head>
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext')
-    </style>
     <Body>
+      <Sidebar title='Nav' />
       {props.children}
       <Footer />
     </Body>

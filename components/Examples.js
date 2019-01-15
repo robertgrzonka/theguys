@@ -27,7 +27,7 @@ export default class Examples extends React.Component {
     h2 {
       font-variant-caps: all-small-caps;
       color: ${this.state.isOpen
-        ? 'rgb(216, 112, 147)'
+        ? 'rgb(237, 20, 61)'
         : 'rgba(112, 128, 144, 1)'
       };
       padding: 10px 20px;
@@ -44,7 +44,7 @@ export default class Examples extends React.Component {
     h2:hover {
       cursor: pointer;
       color: ${this.state.isOpen
-        ? 'rgba(216, 112, 147, 0.7)'
+        ? 'rgba(237, 20, 61, 0.7)'
         : 'rgba(112, 128, 144, 0.7)'
       };
     }
