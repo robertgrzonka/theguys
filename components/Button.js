@@ -1,34 +1,34 @@
-const Button = props => (
-  <a href={props.href}>
-    <button>
-      {props.children}
-    </button>
-    <style jsx>{`
-    button {
-        cursor: pointer;
-        border-radius: 5px;
-        background-color: black;
-        letter-spacing: 0.07rem;
-        transition: all 0.3s;
-      }
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import design from '../designsystem/designSystem'
 
-      button {
-        color: ${'outline' in props ? props.color : 'white'};
-        background-color: ${'outline' in props ? 'white' : props.color};
-        box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
-        border: 1px solid ${props.color || 'black'};
-        font-size: ${'large' in props ? '1.2' : '0.8'}rem;
-        padding: ${'large' in props ? '10px 50px' : '10px 25px'};
-        font-weight: ${'large' in props ? 400 || 'medium' : 100 || 'regular'};
-        }
+const dynamicStyle = props => css`
+  color: ${props.outline ? props.color : 'white'};
+  background: ${props.outline ? 'white' : props.color};
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  border: 1px solid ${props.outline ? props.color : 'rgba(0, 0, 0, 0.1)'};
+  font-size: ${props.large ? '1em' : '0.8em'};
+  padding: ${props.large ? '10px 42px' : '10px 25px'};
+  font-weight: ${props.large ? 600 : 400};
+  letter-spacing: ${design.get('type.letterSpacing.small')};
+  &:hover {
+    background-color: ${props.outline ? props.color || 'black' : 'white'};
+    box-shadow: 0px 6px 18px ${props.color ? props.color : 'black'};
+    color: ${props.outline ? 'white' : props.color || 'black'};
+    border: 1px solid ${props.outline ? 'rgba(0,0,0,0.1)' : props.color};
+  }
+`
 
-      button:hover {
-        background-color: ${'outline' in props ? props.color || 'black' : 'white'};
-        box-shadow: 0px 6px 18px ${props.color ? props.color : 'black'};
-        color: ${'outline' in props ? 'white' : props.color || 'black'};
-      }
-      `}</style>
-  </a>
+const Button = styled.button`
+  cursor: pointer;
+  border-radius: 3px;
+  background: black;
+  ${dynamicStyle};
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+`
+
+export default (props) => (
+  <Button href={props.href} {...props}>
+    {props.children}
+  </Button>
 )
-
-export default Button

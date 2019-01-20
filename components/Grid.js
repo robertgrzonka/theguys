@@ -23,16 +23,16 @@ export const Row = (props) => (
   </div>
 )
 
-const container = {
-  maxWidth: '100%',
-  height: 'auto',
-  margin: '50px',
-  padding: '50px',
-  display: 'grid'
-}
-
-export const Container = ({ children }) => (
-  <div style={container}>
-    {children}
+export const Container = (props) => (
+  <div>
+    {props.children}
+    <style jsx>
+      {`
+      max-width: 100%,
+      height: auto,
+      margin: ${'fluid' in props ? '0xp' : '25px'},
+      padding: ${'fluid' in props ? '0xp' : '25px'}
+      `}
+    </style>
   </div>
 )

@@ -1,16 +1,19 @@
+import styled from '@emotion/styled'
+
+const Wrapper = styled.div`
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+`
+
 const Body = (props) => (
-  <div className='wrapper'>
-    <div style={props.css}>
+  <Wrapper>
+    <div {...props}>
       {props.children}
     </div>
-    <style jsx>{`
-      div.wrapper {
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
-      }`}</style>
-  </div>
+  </Wrapper>
 )
 
 export default Body
