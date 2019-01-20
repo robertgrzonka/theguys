@@ -15,43 +15,18 @@ export default class Examples extends React.Component {
   }
   render () {
     return (
-      <div>
-        <h2 onClick={this.handleChange}>
-          {this.props.text}
-          <span>{this.state.isOpen ? '▼' : '▶︎'}</span>
-        </h2>
+      <div style={{ maxWidth: '100%', margin: '0 auto' }}>
+        <h4 onClick={this.handleChange}>
+          {this.props.text || 'Examples'}{' '}{this.state.isOpen ? '▼' : '▶︎'}
+        </h4>
         <div className='examples'>
           {this.props.children}
         </div>
         <style jsx>{`
-    h2 {
-      font-variant-caps: all-small-caps;
-      color: ${this.state.isOpen
-        ? 'rgb(216, 112, 147)'
-        : 'rgba(112, 128, 144, 1)'
-      };
-      padding: 10px 20px;
-      margin: 30px 0px;
-      font-weight: 300;
-      transition: all 0.4s;
-    }
-
-    span {
-      padding-left: 20px;
-      font-variant-caps: 'normal';
-    }
-
-    h2:hover {
-      cursor: pointer;
-      color: ${this.state.isOpen
-        ? 'rgba(216, 112, 147, 0.7)'
-        : 'rgba(112, 128, 144, 0.7)'
-      };
-    }
 
     .examples {
-      padding: 50px;
-      border-radius: 5px;
+      padding: 2rem;
+      border-radius: 0.35rem;
       border: 1px solid rgba(0,0,0,0.1);
       background-color: rgb(255,255,255);
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -60,10 +35,27 @@ export default class Examples extends React.Component {
 
     @media (max-width: 900px) {
       .examples {
-        padding: 20px;
-        margin: 0;
-        background-color: rgb(245,245,245);
+        padding: 10px;
       }
+    }
+    h4 {
+      color: 
+      ${this.state.isOpen
+        ? 'rgb(220,20,60)'
+        : 'rgba(112, 128, 144, 1)'
+      };
+      padding: 20px;
+      font-weight: 300;
+      transition: all 0.4s;
+    }
+
+    h4:hover {
+      cursor: pointer;
+      color: 
+      ${this.state.isOpen
+        ? 'rgba(220,20,60, 0.7)'
+        : 'rgba(112, 128, 144, 0.7)'
+      };
     }
 
     `}</style>
