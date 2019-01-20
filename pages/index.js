@@ -29,7 +29,6 @@ export default () => (
       {props.children}
     </h1>
   )
-
   render(
     <div>
       <Header>
@@ -50,9 +49,7 @@ export default () => (
         Right-aligned, smaller, oblique.
       </Header>
     </div>
-  )
-        
-        `} />
+  )`} />
       </Examples>
     </Component>
 
