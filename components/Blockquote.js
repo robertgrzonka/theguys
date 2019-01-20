@@ -1,36 +1,20 @@
-const Blockquote = props => (
-  <blockquote>
-    <h2 style={props.css}>{props.title}</h2>
-    <p>{props.msg || props.children}</p>
-    <style jsx>{`
+import styled from '@emotion/styled'
 
-    h2 {
-      font-weight: 300;
-      letter-spacing: 0.1rem;
-      font-variant-caps: all-small-caps;
-    }
+const Blockquote = styled.blockquote`
+  margin: 25px;
+  padding: 15px 40px 20px 40px;
+  display: block;
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid ${props => props.color ? props.color : 'rgba(0,0,0,0.5)'};
+  color: ${props => props.color ? props.color : 'black'};
+  box-shadow: 0px 0px 3px ${props => props.color ? props.color : 'rgba(0,0,0,0.5)'};
+  border-top: 15px solid ${props => props.color ? props.color : 'rgba(0,0,0,1)'};
+`
 
-    p {
-      font-size: 1rem;
-    }
-    
-    blockquote {
-      margin: 25px;
-      padding: 15px 40px 20px 40px;
-      display: block;
-      border-radius: 3px;
-      background-color: rgba(255,255,255,1);
-      border: 1px solid ${props.color ? props.color : 'rgba(0,0,0,0.5)'};
-    }
-
-    blockquote {
-      color: ${props.color ? props.color : 'black'};
-      box-shadow: 0px 0px 3px ${props.color ? props.color : 'rgba(0,0,0,0.5)'};
-      border-top: 15px solid ${props.color ? props.color : 'rgba(0,0,0,1)'};
-    }
-
-  `}</style>
-  </blockquote>
+export default (props) => (
+  <Blockquote {...props}>
+    <h4 style={props.css}>{props.title}</h4>
+    <p>{props.children || props.msg}</p>
+  </Blockquote>
 )
-
-export default Blockquote

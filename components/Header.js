@@ -1,20 +1,14 @@
-const Header = props => (
-  <h1 style={props}>
-    {props.text}
-    <span>
-      {props.children}
-    </span>
-    <style jsx>{`
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: black;
-      margin: 10px 0 20px 0;
-      font-weight: 500;
-      letter-spacing: 0.1rem;
-      }
-  `}</style>
-  </h1>
-)
+import styled from '@emotion/styled'
+import design from '../designsystem/designSystem'
 
-export default Header
+export const Title = styled.h1`
+  color: ${design.color('dark')};
+  margin: 1rem 0;
+  font-weight: ${design.get('type.fontWeight.headings')};
+`
+
+export const Subtitle = styled.h3`
+  color: ${design.color('primary')};
+  margin: 0 0 20 0;
+  font-weight: ${design.get('type.fontWeight.extralight')};
+`
