@@ -8,14 +8,6 @@ const ListItem = props => (
         li {
           margin-left: 30px;
         }
-
-        a:link, a:active{
-          text-decoration: none;
-          color: rgb(237, 20, 61);
-        }
-        a:hover, a:visited {
-          color: rgba(237, 20, 61,0.7)
-        }
     `}
     </style>
   </div>

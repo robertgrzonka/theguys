@@ -4,8 +4,6 @@ import { Title, Subtitle } from '../components/Header'
 import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import design from '../designsystem/designSystem'
-import styled from '@emotion/styled'
-import Navigation from './Navigation'
 
 export default (props) => (
   <div>
@@ -26,10 +24,9 @@ export default (props) => (
       <Subtitle>
           React Components mini–library
       </Subtitle>
-      <Navigation />
     </div>
     <Body>
-      <Sidebar title='Nav' />
+      <Sidebar />
       {props.children}
       <Footer />
     </Body>
@@ -45,6 +42,7 @@ export default (props) => (
       align-items: center;
       align-content: center;
       margin: 0 auto;
+      max-width: 100%;
       text-rendering: ${design.get('type.textRendering')};
       background-color: ${design.color('background')};
       font-family: ${design.get('type.fontFamily.sans')};
@@ -86,12 +84,6 @@ export default (props) => (
       line-height: ${design.get('type.lineHeight.paragraph')};
       font-weight: ${design.get('type.fontWeight.normal')};
       letter-spacing: ${design.get('type.letterSpacing.large')};
-    }
-
-    @media (max-width: 900px) {
-      body {
-        margin: 10px;
-      }
     }
 
     a:link, a:active {

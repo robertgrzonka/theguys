@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import Button from '../components/Button'
-import Blockquote from '../components/Blockquote'
+import { Blockquote, Quote, Mark } from '../components/Blockquote'
 import Input from '../components/Form'
 import { Component } from '../components/Component'
 import Examples from '../components/Examples'
@@ -83,7 +83,7 @@ export default () => (
       </Examples>
     </Component>
 
-    <Component text='Cards'>
+    <Component text='Cards' id='cards'>
       Lorem ipsum solor domet
     </Component>
 
@@ -120,6 +120,12 @@ export default () => (
     <Component text='Blockquotes'>
     Lorem ipsum solor domet
       <Examples>
+        <Quote>
+       Simply testing <Mark>Quotes</Mark> and <Mark>Marks</Mark>.
+        </Quote>
+        <Quote color='turquoise'>
+        Simply testing <Mark>Quotes</Mark> and <Mark>Marks</Mark>.
+        </Quote>
         <Blockquote
           title='Styling Components'
           msg='This is default Blockquote.'
