@@ -27,12 +27,13 @@ const Code = props => (
       .editor {
         overflow: scroll;
         color: white;
+        background: black;
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 50%;
         width: 50%;
-        display: inline-block;
         max-height: 30rem;
+        display: inline-block;
       }
 
       .preview {
@@ -47,6 +48,7 @@ const Code = props => (
         display: inline-block;
         vertical-align: top;
         height: auto;
+        z-index: 10;
       }
       `}
     </style>

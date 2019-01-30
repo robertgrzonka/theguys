@@ -1,10 +1,9 @@
 import styled from '@emotion/styled'
 
-const Blockquote = styled.blockquote`
+const BlockquoteStyles = styled.blockquote`
   margin: 25px;
   padding: 15px 40px 20px 40px;
   display: block;
-  border-radius: 3px;
   background-color: white;
   border: 1px solid ${props => props.color ? props.color : 'rgba(0,0,0,0.5)'};
   color: ${props => props.color ? props.color : 'black'};
@@ -12,9 +11,33 @@ const Blockquote = styled.blockquote`
   border-top: 15px solid ${props => props.color ? props.color : 'rgba(0,0,0,1)'};
 `
 
-export default (props) => (
-  <Blockquote {...props}>
+const QuoteStyles = styled.blockquote`
+  margin: 25px;
+  padding: 10px;
+  padding-left: 25px;
+  display: block;
+  background-color: #637381;
+  color: #DFE4E8;
+  box-shadow: none;
+  border-left: 5px solid ${props => props.color ? props.color : '#212B35'};
+`
+
+export const Mark = styled.code`
+  padding: 5px;
+  font-family: monospace;
+  color: ${props => props.color ? props.color : 'turquoise'};
+  background-color: #454F5B;
+`
+
+export const Quote = (props) => (
+  <QuoteStyles {...props}>
+    {props.children}
+  </QuoteStyles>
+)
+
+export const Blockquote = (props) => (
+  <BlockquoteStyles {...props}>
     <h4 style={props.css}>{props.title}</h4>
     <p>{props.children || props.msg}</p>
-  </Blockquote>
+  </BlockquoteStyles>
 )

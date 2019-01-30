@@ -21,7 +21,7 @@ const dynamicStyle = props => css`
 
 const Button = styled.button`
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 5px;
   background: black;
   ${dynamicStyle};
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
