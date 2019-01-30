@@ -16,11 +16,9 @@ class Input extends React.Component {
       value: event.target.value
     })
   }
-  handleSubmit (eventSubmit) {
-    eventSubmit.preventDefault()
-    this.setState({
-      value: ''
-    })
+  handleSubmit (event) {
+    this.props.submit = this.state.value
+    event.preventDefault()
   }
   render () {
     return (
@@ -34,26 +32,26 @@ class Input extends React.Component {
               onChange={this.handleChange}
             />
           </label>
-          <input type='submit' value='Submit' onSubmit={this.handleSubmit} />
+          <input type='submit' value='Submit' />
         </form>
         <p><span>State value:</span>{' '}{this.state.value}</p>
         <style jsx>{`
         form {
           display: flex;
-          justify-content: center;
+          justify-content: baseline;
           align-items: center;
           margin: 20px;
           }
         input {
           padding: 10px;
           border: 1px solid slategray;
-          border-radius: 5px;
+          border-radius: 3px;
           background-color: white;
           transition: all 0.4s;
           font-size: 1rem;
         }
         input:focus {
-          box-shadow: 0px 0px 3px black;
+          box-shadow: 0px 0px 3px #212B35;
         }
         input[type='submit'] {
           cursor: pointer;
@@ -62,7 +60,7 @@ class Input extends React.Component {
           margin-left: 20px;
         }
         input[type='submit']:hover {
-          background-color: black;
+          background-color: #212B35;
           color: white;
         }
         p {
@@ -71,7 +69,7 @@ class Input extends React.Component {
           font-size: 1rem;
         }
         span {
-          font-weight: 400;
+          font-weight: 600;
         }
         `}</style>
       </div>

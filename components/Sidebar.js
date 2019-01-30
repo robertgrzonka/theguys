@@ -1,51 +1,48 @@
 import ListItem from './ListItem'
+import design from '../designsystem/designSystem'
+import styled from '@emotion/styled'
 
-const Sidebar = props => (
-  <div>
-    <div className='sidebar'>
-      <h2>{props.title}</h2>
-      <ul>
-        <ListItem text='Headers' />
-        <ListItem text='Buttons' />
-        <ListItem text='Cards' />
-        <ListItem text='Code' />
-        <ListItem text='Blockquotes' />
-        <ListItem text='Forms' />
-      </ul>
-    </div>
-    <style jsx>
-      {`
-        h2 {
-          padding-left: 20px;
-          font-weight: 500;
-          display: inline-block;
-        }
+const Logo = styled.h3`
+  padding: 0 50px;
+  color: ${design.color('dark')};
+  font-family: ${design.get('type.fontFamily.serif')};
+`
 
-        ul {
-          list-style-type: none;
-          font-size: 1rem;
-          font-weight: 300;
-          display: flex;
-        }
+const List = styled.ul`
+  list-style-type: none;
+  display: inline-flex;
+  @media (max-width: 950px) {
+    display: none;
+  }
+`
 
-        .sidebar {
-          position: fixed;
-          top: 0;
-          width: 100%;
-          min-height: 100px;
-          background-color: rgba(240,240,240,0.8);
-          display: flex;
-          align-items: center;
-        }
+const Wrapper = styled.div`
+  display: flex;
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  height: 75px;
+  background rgba(255,255,255,0.7);
+  align-items: center;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+  z-index: 100;
+  &:hover {
+    background: white;
+  }
+`
 
-        @media (max-width: 950px) {
-          .sidebar {
-            display: none;
-          }
-        }
-      `}
-    </style>
-  </div>
+const Navigation = props => (
+  <Wrapper>
+    <Logo>theGuys › design</Logo>
+    <List>
+      <ListItem text='Headers' href='#headers' />
+      <ListItem text='Buttons' href='#buttons' />
+      <ListItem text='Cards' href='#cards' />
+      <ListItem text='Code' href='#code' />
+      <ListItem text='Blockquotes' href='#blockquotes' />
+      <ListItem text='Forms' href='#forms' />
+    </List>
+  </Wrapper>
 )
 
-export default Sidebar
+export default Navigation

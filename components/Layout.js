@@ -5,7 +5,13 @@ import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import design from '../designsystem/designSystem'
 import styled from '@emotion/styled'
-import Navigation from './Navigation'
+
+const MainHeader = styled.div`
+  padding: 10rem 0 0 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+`
 
 export default (props) => (
   <div>
@@ -14,40 +20,40 @@ export default (props) => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link href='https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext' rel='stylesheet' />
     </Head>
-    <div style={{
-      padding: '10rem 0 0 0',
-      margin: '0 auto',
-      textAlign: 'center',
-      width: '100vw'
-    }}>
+    <MainHeader>
       <Title>
           theGuys › Design
       </Title>
       <Subtitle>
           React Components mini–library
       </Subtitle>
-      <Navigation />
-    </div>
+    </MainHeader>
     <Body>
-      <Sidebar title='Nav' />
+      <Sidebar />
       {props.children}
       <Footer />
     </Body>
     <style jsx global>{`
     *, body, html {
       box-sizing: border-box;
-      transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    *:hover {
+      transition: all 0.3s linear;
     }
     body {
       display: flex,
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
+      justify-content: baseline;
+      align-items: stretch;
+      align-content: stretch;
       margin: 0 auto;
+      max-width: 100%;
       text-rendering: ${design.get('type.textRendering')};
-      background-color: ${design.color('background')};
       font-family: ${design.get('type.fontFamily.sans')};
+      background: url('static/background.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     h1, h2, h3 {
@@ -88,21 +94,17 @@ export default (props) => (
       letter-spacing: ${design.get('type.letterSpacing.large')};
     }
 
-    @media (max-width: 900px) {
-      body {
-        margin: 10px;
-      }
-    }
-
     a:link, a:active {
       text-decoration: none;
       cursor: pointer;
       color: ${design.color('link', 'base')};
-      transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+      font-weight: ${design.get('type.fontWeight.bold')};
+      transition: all 0.3s linear;
     }
 
     a:hover, a:visited {
       color: ${design.color('link', 'over')};
+      transition: all 0.3s linear;
     }
   `}</style>
   </div>

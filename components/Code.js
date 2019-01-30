@@ -23,7 +23,11 @@ const Code = props => (
         flex-direction: column;
         white-space: pre-wrap;
         word-break: break-word;
+        border-radius: 3px;
+        max-height: 30rem;
+        z-index: 10;
       }
+
       .editor {
         overflow: scroll;
         color: white;
@@ -32,7 +36,9 @@ const Code = props => (
         flex-basis: 50%;
         width: 50%;
         display: inline-block;
+        font-size: 0.9rem;
         max-height: 30rem;
+        border-radius: 3px;
       }
 
       .preview {
@@ -44,9 +50,10 @@ const Code = props => (
         flex-shrink: 1;
         flex-basis: 50%;
         width: 50%;
+        max-height: 30rem;
         display: inline-block;
         vertical-align: top;
-        height: auto;
+        border-radius: 3px;
       }
       `}
     </style>

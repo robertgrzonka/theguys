@@ -16,7 +16,7 @@ const transitions = {
 
 const palette = colorPalette
 
-export const designTokens = {
+const designTokens = {
   type: {
     baseFontSize: '16px',
     sizes: {

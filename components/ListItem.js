@@ -1,24 +1,16 @@
-const ListItem = props => (
-  <div>
-    <li>
-      <a href={`#${props.text.toLowerCase()}`}>{props.text}</a>
-    </li>
-    <style jsx>
-      {`
-        li {
-          margin-left: 30px;
-        }
+import Link from 'next/link'
+import styled from '@emotion/styled'
 
-        a:link, a:active{
-          text-decoration: none;
-          color: rgb(237, 20, 61);
-        }
-        a:hover, a:visited {
-          color: rgba(237, 20, 61,0.7)
-        }
-    `}
-    </style>
-  </div>
+const Point = styled.li`
+  margin-left: 30px;
+`
+
+const ListItem = props => (
+  <Point>
+    <Link href={props.href}>
+      <a>{props.text}</a>
+    </Link>
+  </Point>
 )
 
 export default ListItem

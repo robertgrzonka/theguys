@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import Button from '../components/Button'
-import Blockquote from '../components/Blockquote'
+import { Blockquote, Quote, Mark } from '../components/Blockquote'
 import Input from '../components/Form'
 import { Component } from '../components/Component'
 import Examples from '../components/Examples'
@@ -13,81 +13,139 @@ const ExampleButton = styled(Button)`
 
 export default () => (
   <Layout>
-    <Component text='Styled headers'>
+    <Component text='Styled headers' id='headers'>
       Default Header has it's styles already defined. To style it css properties should be defined as an object as <kbd>props.css</kbd> and text has to be put between opening and closing tags as follows:
       <Examples>
-        <Code code={`
+        <Code code={
+          `
   const Header = props => (
+    <div style={{margin: '20px'}}>
+      {props.children}
+    </div>
+  )
+  
+  const HeaderText = props => (
     <h1 style={{
-      fontFamily: 'Cormorant Garamond, serif',
-      fontSize: '3rem',
-      margin: '20px',
-      fontWeight: '500',
-      letterSpacing: '0.1rem',
+      fontFamily: 'serif',
+      fontSize: '32px',
+      fontWeight: '100',
       ...props.style
     }}>
       {props.children}
     </h1>
   )
   render(
-    <div>
-      <Header>
+    <Header>
+      <HeaderText>
         Default header.
-      </Header>
-      <Header style={{
+      </HeaderText>
+      <HeaderText style={{
         textAlign: 'center',
-        color: 'royalblue',
+        color: 'mediumturquoise',
         fontWeight: '900'
       }}>
-        Bold, centered, blue.
-      </Header>
-      <Header style={{
+        Bold, centered, turquoise.
+      </HeaderText>
+      <HeaderText style={{
         textAlign: 'right',
         fontSize: '1.5rem',
         fontStyle: 'oblique'
       }}>
         Right-aligned, smaller, oblique.
-      </Header>
-    </div>
-  )`} />
+      </HeaderText>
+    </Header>
+  )
+  `} />
       </Examples>
     </Component>
 
-    <Component text='Buttons'>
+    <Component text='Buttons' id='buttons'>
       Lorem ipsum solor domet
       <Examples>
         <ExampleButton>Default</ExampleButton>
-        <ExampleButton color={'lightpink'}>Lightpink</ExampleButton>
-        <ExampleButton color={'palevioletred'}>Palevioletred</ExampleButton>
-        <ExampleButton color={'royalblue'}>Royalblue</ExampleButton>
-        <ExampleButton color={'#EEBC1D'}>Gold</ExampleButton>
-        <ExampleButton color={'lightseagreen'}>Lightseagreen</ExampleButton>
-        <ExampleButton color={'crimson'}>Crimson</ExampleButton>
-        <ExampleButton color={'darkcyan'}>Darkcyan</ExampleButton>
+        <ExampleButton color='lightpink'>
+          Lightpink
+        </ExampleButton>
+        <ExampleButton color='palevioletred'>
+          Palevioletred
+        </ExampleButton>
+        <ExampleButton color='mediumturquoise'>
+          Mediumturqoise
+        </ExampleButton>
+        <ExampleButton color='royalblue'>
+          Royalblue
+        </ExampleButton>
+        <ExampleButton color='#EEBC1D'>
+          Gold
+        </ExampleButton>
+        <ExampleButton color='lightseagreen'>
+          Lightseagreen
+        </ExampleButton>
+        <ExampleButton color='crimson'>
+          Crimson
+        </ExampleButton>
+        <ExampleButton color='darkcyan'>
+          Darkcyan
+        </ExampleButton>
       </Examples>
 
       <Examples text='Outline buttons'>
-        <ExampleButton outline>Default</ExampleButton>
-        <ExampleButton color='lightpink' outline>Lightpink</ExampleButton>
-        <ExampleButton color='palevioletred' outline>Palevioletred</ExampleButton>
-        <ExampleButton color='royalblue' outline>Royalblue</ExampleButton>
-        <ExampleButton color='#EEBC1D' outline>Gold</ExampleButton>
-        <ExampleButton color='lightseagreen' outline>Lightseagreen</ExampleButton>
-        <ExampleButton color='crimson' outline>Crimson</ExampleButton>
-        <ExampleButton color='darkcyan' outline>Darkcyan</ExampleButton>
+        <ExampleButton
+          className='outline'>
+          Default
+        </ExampleButton>
+        <ExampleButton
+          color='lightpink'
+          className='outline'>
+          Lightpink
+        </ExampleButton>
+        <ExampleButton
+          color='palevioletred'
+          className='outline'>
+          Palevioletred
+        </ExampleButton>
+        <ExampleButton
+          color={'mediumturquoise'}
+          className='outline'>
+          Mediumturqoise
+        </ExampleButton>
+        <ExampleButton
+          color='royalblue'
+          className='outline'>
+          Royalblue</ExampleButton>
+        <ExampleButton
+          color='#EEBC1D'
+          className='outline'>
+          Gold
+        </ExampleButton>
+        <ExampleButton
+          color='lightseagreen'
+          className='outline'>
+          Lightseagreen
+        </ExampleButton>
+        <ExampleButton
+          color='crimson'
+          className='outline'>
+          Crimson
+        </ExampleButton>
+        <ExampleButton
+          color='darkcyan'
+          className='outline'>
+          Darkcyan
+        </ExampleButton>
       </Examples>
 
       <Examples text='Large and small'>
-        <ExampleButton large>Large</ExampleButton>
-        <ExampleButton large outline>Outline</ExampleButton>
+        <ExampleButton className='large'>Large</ExampleButton>
+        <ExampleButton className='outline large'>Outline</ExampleButton>
       </Examples>
     </Component>
 
-    <Component text='Cards'>
+    <Component text='Cards' id='cards'>
       Lorem ipsum solor domet
     </Component>
 
-    <Component text='Code'>
+    <Component text='Code' id='code'>
       Thanks to{' '}<a href='https://github.com/FormidableLabs/react-live'>React Live</a>.
       <Examples>
         <Code code={`
@@ -117,18 +175,20 @@ export default () => (
       </Examples>
     </Component>
 
-    <Component text='Blockquotes'>
+    <Component text='Blockquotes' id='blockquotes'>
     Lorem ipsum solor domet
       <Examples>
-        <Blockquote
-          title='Styling Components'
-          msg='This is default Blockquote.'
-        />
-        <Blockquote
-          title='Lorem Ipsum'
-          msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
-          color='lightpink'
-        />
+        <Quote>
+       Simply testing <Mark>Quotes</Mark> and <Mark>Marks</Mark>.
+        </Quote>
+        <Quote color='turquoise'>
+        Simply testing <Mark color='turquoise'>Quotes</Mark> and <Mark color='turquoise'>Marks</Mark>.
+        </Quote>
+        <Blockquote title='Styling Components'>
+          This is default Blockquote.
+        </Blockquote>
+        <Blockquote title='Lorem Ipsum' color='lightpink'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
+        </Blockquote>
         <Blockquote
           title='Lorem Ipsum'
           msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
@@ -157,7 +217,7 @@ export default () => (
       </Examples>
     </Component>
 
-    <Component text='Forms'>
+    <Component text='Forms' id='forms'>
     Lorem ipsum solor domet.
       <Examples>
         <Input name='Input' />

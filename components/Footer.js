@@ -5,13 +5,14 @@ import design from '../designsystem/designSystem'
 const Wrapper = styled.div`
   width: 100%;
   text-align: center;
-  margin: 10rem 0 2rem 0;
+  margin: 10rem 0;
+  color: #F9FAFB;
 `
 
 const Logo = styled.img`
   min-width: 150px;
   max-width: 15%;
-  margin: 50px 0 0 0;
+  margin: 0px;
 `
 
 const Footer = () => (
