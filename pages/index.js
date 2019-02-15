@@ -7,8 +7,15 @@ import Examples from '../components/Examples'
 import Code from '../components/Code'
 import styled from '@emotion/styled'
 
-const ExampleButton = styled(Button)`
-  margin: 10px;
+const ButtonWrapper = styled.div`
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  align-content: space-around;
+  & button {
+    width: 30%
+  }
 `
 
 export default () => (
@@ -60,84 +67,98 @@ export default () => (
     </Component>
 
     <Component text='Buttons' id='buttons'>
-      Lorem ipsum solor domet
+      <Quote>Buttons below are wrapped by <Mark>ButtonWrapper</Mark> which tells them to be more wide. In default they've got paddings and are not much bigger.</Quote>
       <Examples>
-        <ExampleButton>Default</ExampleButton>
-        <ExampleButton color='lightpink'>
+        <ButtonWrapper>
+          <Button>Default</Button>
+          <Button color='lightpink'>
           Lightpink
-        </ExampleButton>
-        <ExampleButton color='palevioletred'>
+          </Button>
+          <Button color='palevioletred'>
           Palevioletred
-        </ExampleButton>
-        <ExampleButton color='mediumturquoise'>
-          Mediumturqoise
-        </ExampleButton>
-        <ExampleButton color='royalblue'>
+          </Button>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <Button color='Turquoise'>
+          Turqoise
+          </Button>
+          <Button color='royalblue'>
           Royalblue
-        </ExampleButton>
-        <ExampleButton color='#EEBC1D'>
+          </Button>
+          <Button color='#EEBC1D'>
           Gold
-        </ExampleButton>
-        <ExampleButton color='lightseagreen'>
-          Lightseagreen
-        </ExampleButton>
-        <ExampleButton color='crimson'>
+          </Button>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <Button color='Seagreen'>
+          Seagreen
+          </Button>
+          <Button color='crimson'>
           Crimson
-        </ExampleButton>
-        <ExampleButton color='darkcyan'>
+          </Button>
+          <Button color='darkcyan'>
           Darkcyan
-        </ExampleButton>
+          </Button>
+        </ButtonWrapper>
       </Examples>
 
       <Examples text='Outline buttons'>
-        <ExampleButton
-          className='outline'>
+        <ButtonWrapper>
+          <Button
+            className='outline'>
           Default
-        </ExampleButton>
-        <ExampleButton
-          color='lightpink'
-          className='outline'>
+          </Button>
+          <Button
+            color='lightpink'
+            className='outline'>
           Lightpink
-        </ExampleButton>
-        <ExampleButton
-          color='palevioletred'
-          className='outline'>
+          </Button>
+          <Button
+            color='palevioletred'
+            className='outline'>
           Palevioletred
-        </ExampleButton>
-        <ExampleButton
-          color={'mediumturquoise'}
-          className='outline'>
-          Mediumturqoise
-        </ExampleButton>
-        <ExampleButton
-          color='royalblue'
-          className='outline'>
-          Royalblue</ExampleButton>
-        <ExampleButton
-          color='#EEBC1D'
-          className='outline'>
+          </Button>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <Button
+            color='turquoise'
+            className='outline'>
+          Turqoise
+          </Button>
+          <Button
+            color='royalblue'
+            className='outline'>
+          Royalblue</Button>
+          <Button
+            color='#EEBC1D'
+            className='outline'>
           Gold
-        </ExampleButton>
-        <ExampleButton
-          color='lightseagreen'
-          className='outline'>
-          Lightseagreen
-        </ExampleButton>
-        <ExampleButton
-          color='crimson'
-          className='outline'>
+          </Button>
+        </ButtonWrapper>
+        <ButtonWrapper>
+          <Button
+            color='seagreen'
+            className='outline'>
+          Seagreen
+          </Button>
+          <Button
+            color='crimson'
+            className='outline'>
           Crimson
-        </ExampleButton>
-        <ExampleButton
-          color='darkcyan'
-          className='outline'>
+          </Button>
+          <Button
+            color='darkcyan'
+            className='outline'>
           Darkcyan
-        </ExampleButton>
+          </Button>
+        </ButtonWrapper>
       </Examples>
 
       <Examples text='Large and small'>
-        <ExampleButton className='large'>Large</ExampleButton>
-        <ExampleButton className='outline large'>Outline</ExampleButton>
+        <ButtonWrapper>
+          <Button className='large'>Large</Button>
+          <Button className='outline large'>Outline</Button>
+        </ButtonWrapper>
       </Examples>
     </Component>
 

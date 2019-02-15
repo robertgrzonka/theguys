@@ -11,19 +11,19 @@ const fontFamily = {
 
 const transitions = {
   duration: '300ms',
-  timing: 'cubic-bezier(0.77, 0, 0.175, 1)'
+  timing: 'ease'
 }
 
 const palette = colorPalette
 
 const designTokens = {
   type: {
-    baseFontSize: '16px',
+    baseFontSize: '14px',
     sizes: {
       xs: '12px',
       s: '14px',
-      regular: '16px',
-      m: '18px',
+      regular: '14px',
+      m: '16px',
       l: '24px',
       xl: '32px',
       xxl: '40px'
@@ -35,6 +35,7 @@ const designTokens = {
 
     lineHeight: {
       paragraph: 1.45,
+      regular: 1.4,
       headings: 1.3
     },
 

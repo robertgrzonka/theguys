@@ -1,11 +1,14 @@
 {
   "version": 2,
   "builds": [{
-    "src": "package.json",
+    "src": "next.config.js",
     "use": "@now/next"
   }],
   "alias": [
     "theguys.design",
     "design.theguys.sh"
-  ]
+  ],
+  "github": {
+    "autoAlias": false
+  }
 }

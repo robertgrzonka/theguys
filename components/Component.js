@@ -5,14 +5,18 @@ import styled from '@emotion/styled'
 const Wrapper = styled.div`
       background-color: ${design.color('bright', 'dark')};
       box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
-      padding: 50px 25%;
+      padding: 50px 20%;
       margin-top: 50px;
       border: 2px 0px 3px 0px solid rgba(0, 0, 0, 0.3);
-  @media (max-width: 1350px) {
-      padding: 50px;
+  @media (max-width: 1250px) {
+      padding: 50px 15%;
       border: 2px 0px 3px 0px solid rgba(255,255,255,0.8);
     }
-  @media (max-width: 900px) {
+    @media (max-width: 1050px) {
+      padding: 50px 10%;
+      border: 2px 0px 3px 0px solid rgba(255,255,255,0.8);
+    }
+  @media (max-width: 850px) {
       margin: 50px;
       padding: 0;
       border: 0;

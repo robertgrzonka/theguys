@@ -4,7 +4,6 @@ import { Title, Subtitle } from '../components/Header'
 import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import design from '../designsystem/designSystem'
-<<<<<<< HEAD
 import styled from '@emotion/styled'
 
 const MainHeader = styled.div`
@@ -13,8 +12,6 @@ const MainHeader = styled.div`
   text-align: center;
   width: 100%;
 `
-=======
->>>>>>> b6a6812463966130f1ec241e8c43cd3ae9a35291
 
 export default (props) => (
   <div>
@@ -30,24 +27,17 @@ export default (props) => (
       <Subtitle>
           React Components mini–library
       </Subtitle>
-<<<<<<< HEAD
     </MainHeader>
-=======
-    </div>
->>>>>>> b6a6812463966130f1ec241e8c43cd3ae9a35291
     <Body>
       <Sidebar />
       {props.children}
       <Footer />
     </Body>
     <style jsx global>{`
-    *, body, html {
+    * {
       box-sizing: border-box;
     }
 
-    *:hover {
-      transition: all 0.3s linear;
-    }
     body {
       display: flex,
       flex-direction: row;
@@ -86,7 +76,7 @@ export default (props) => (
       font-weight: ${design.get('type.fontWeight.medium')};
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6  {
       letter-spacing: ${design.get('type.letterSpacing.small')};
     }
 
@@ -95,6 +85,7 @@ export default (props) => (
     }
 
     p {
+      font-size: ${design.get('type.fontSize.base')};
       font-family: ${design.get('type.fontFamily.sans')};
       line-height: ${design.get('type.lineHeight.paragraph')};
       font-weight: ${design.get('type.fontWeight.normal')};
@@ -104,14 +95,14 @@ export default (props) => (
     a:link, a:active {
       text-decoration: none;
       cursor: pointer;
-      color: ${design.color('link', 'base')};
-      font-weight: ${design.get('type.fontWeight.bold')};
-      transition: all 0.3s linear;
+      color: ${design.color('primary', 'dark')};
+      font-weight: ${design.get('type.fontWeight.normal')};
+      transition: all 0.3s ease;
     }
 
     a:hover, a:visited {
-      color: ${design.color('link', 'over')};
-      transition: all 0.3s linear;
+      color: ${design.color('primary', 'light')};
+      transition: all 0.3s ease;
     }
   `}</style>
   </div>

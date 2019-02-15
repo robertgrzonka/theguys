@@ -1,0 +1,13 @@
+{
+  "projectName": "theguys",
+  "projectOwner": "robertgrzonka",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 150,
+  "commit": true,
+  "contributors": [],
+  "contributorsPerLine": 7
+}

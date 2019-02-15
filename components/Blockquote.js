@@ -27,6 +27,9 @@ const QuoteStyles = styled.blockquote`
   color: ${design.color('bright', 'dark')};
   box-shadow: none;
   border-left: 10px solid ${props => props.color ? props.color : design.color('dark', 'base')};
+  font-size: ${design.get('type.fontSize.base')};
+  text-shadow: 0px 1px 1px ${design.color('dark', 'base')};
+  line-height: ${design.get('type.lineHeight.regular')};
 `
 
 export const Quote = (props) => (
@@ -39,11 +42,11 @@ const BlockquoteStyles = styled.blockquote`
   margin: 25px;
   padding: 15px 40px 20px 40px;
   display: block;
-  background-color: white;
+  background-color: ${design.color('bright')};
   border: 1px solid ${props => props.color ? props.color : design.color('dark', 'lighter')};
   border-top: 15px solid ${props => props.color ? props.color : design.color('dark', 'lighter')};
   color: ${props => props.color ? props.color : design.color('dark', 'base')};
-  box-shadow: 0px 0px 3px ${props => props.color ? props.color : design.color('dark', 'base')};
+  box-shadow: 0px 1px 3px ${props => props.color ? props.color : design.color('dark', 'base')};
 `
 
 export const Blockquote = (props) => (

@@ -8,6 +8,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
+    "all-contributors-cli": "^6.1.1",
     "design-system-utils": "^1.2.0",
     "next": "^8.0.0-canary.3",
     "react": "^16.7.0",
