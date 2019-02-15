@@ -1,4 +1,4 @@
-<img src="./static/theguysdesign.svg" width="250px">
+<img src="./static/theguysdesign-black.svg" width="250px">
 
 # [theGuys ‣ design](#)
 > React UI components for [theGuys](https://theguys.sh)
