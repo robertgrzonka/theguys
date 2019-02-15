@@ -1,7 +1,9 @@
 <img src="./static/theguysdesign-black.svg" width="250px">
 
-# [theGuys ‣ design](#)
-> React UI components for [theGuys](https://theguys.sh)
+# [theGuys ‣ design](https://theguys.design)
+> UI components build on top of [emotion](#emotion) for [theGuys](https://theguys.sh)
+
+> **This is only the scratch of README**
 
 - [theGuys ‣ design](#theguys-%E2%80%A3-design)
   - [Installing / Getting started](#installing--getting-started)
