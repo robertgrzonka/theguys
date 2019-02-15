@@ -38,6 +38,7 @@ const Button = styled.button`
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
+<<<<<<< HEAD
   border-radius: 3px;
   transition: all 0.3s;
   &:hover {
@@ -49,6 +50,12 @@ const Button = styled.button`
   &.large {
     ${large}
   }
+=======
+  border-radius: 5px;
+  background: black;
+  ${dynamicStyle};
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+>>>>>>> b6a6812463966130f1ec241e8c43cd3ae9a35291
 `
 
 export default (props) => (
