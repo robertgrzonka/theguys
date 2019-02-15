@@ -189,31 +189,14 @@ export default () => (
         </Blockquote>
         <Blockquote title='Lorem Ipsum' color='lightpink'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
         </Blockquote>
-        <Blockquote
-          title='Lorem Ipsum'
-          msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
-          color='palevioletred'
-        />
-        <Blockquote
-          title='Lorem Ipsum'
-          msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
-          color='royalblue'
-        />
-        <Blockquote
-          title='Lorem Ipsum'
-          msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
-          color='lightseagreen'
-        />
-        <Blockquote
-          title='Lorem Ipsum'
-          msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
-          color='#EEBC1D'
-        />
-        <Blockquote
-          title='Lorem Ipsum'
-          msg='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
-          color='darkcyan'
-        />
+        <Blockquote title='Lorem Ipsum' color='mediumturquoise'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
+        </Blockquote>
+        <Blockquote title='Lorem Ipsum' color='slateblue'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
+        </Blockquote>
+        <Blockquote title='Lorem Ipsum' color='slategray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
+        </Blockquote>
+        <Blockquote title='Lorem Ipsum' color='crimson'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
+        </Blockquote>
       </Examples>
     </Component>
 

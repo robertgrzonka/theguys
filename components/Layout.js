@@ -4,6 +4,7 @@ import { Title, Subtitle } from '../components/Header'
 import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import design from '../designsystem/designSystem'
+<<<<<<< HEAD
 import styled from '@emotion/styled'
 
 const MainHeader = styled.div`
@@ -12,6 +13,8 @@ const MainHeader = styled.div`
   text-align: center;
   width: 100%;
 `
+=======
+>>>>>>> b6a6812463966130f1ec241e8c43cd3ae9a35291
 
 export default (props) => (
   <div>
@@ -27,7 +30,11 @@ export default (props) => (
       <Subtitle>
           React Components mini–library
       </Subtitle>
+<<<<<<< HEAD
     </MainHeader>
+=======
+    </div>
+>>>>>>> b6a6812463966130f1ec241e8c43cd3ae9a35291
     <Body>
       <Sidebar />
       {props.children}
