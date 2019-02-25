@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import design from '../designsystem/designSystem'
 
 const MarkStyles = styled.code`
-  padding: 5px;
+  padding: 5px 10px;
   font-family: monospace;
   color: ${props =>
     props.color
@@ -10,6 +10,7 @@ const MarkStyles = styled.code`
       : design.color('bright', 'darker')};
   background: ${design.color('dark', 'light')};
   border-radius: 3px;
+  font-size: 1.1rem;
 `
 
 export const Mark = (props) => (
@@ -27,31 +28,51 @@ const QuoteStyles = styled.blockquote`
   color: ${design.color('bright', 'dark')};
   box-shadow: none;
   border-left: 10px solid ${props => props.color ? props.color : design.color('dark', 'base')};
-  font-size: ${design.get('type.fontSize.base')};
-  text-shadow: 0px 1px 1px ${design.color('dark', 'base')};
+  font-size: ${design.get('type.fontSize.regular')};
+  font-weight: ${design.get('type.fontWeight.light')};
   line-height: ${design.get('type.lineHeight.regular')};
+  position: relative;
 `
 
 export const Quote = (props) => (
   <QuoteStyles color={props.color}>
+    <p>{props.children}</p>
+  </QuoteStyles>
+)
+
+const InfoText = styled.p`
+  font-size: 1.2rem;
+  font-variant-caps: all-small-caps;
+  margin-top: 0;
+  letter-spacing: 0.15rem;
+  color: ${props => props.color
+    ? props.color
+    : design.color('bright', 'darker')};
+  font-weight: 500;
+`
+
+export const Info = (props) => (
+  <QuoteStyles color={props.color}>
+    <InfoText color={props.color}>{props.header || 'Note'}</InfoText>
     {props.children}
   </QuoteStyles>
 )
 
 const BlockquoteStyles = styled.blockquote`
   margin: 25px;
-  padding: 15px 40px 20px 40px;
+  padding: 5px 40px 15px 40px;
   display: block;
   background-color: ${design.color('bright')};
   border: 1px solid ${props => props.color ? props.color : design.color('dark', 'lighter')};
-  border-top: 15px solid ${props => props.color ? props.color : design.color('dark', 'lighter')};
+  border-top: 20px solid ${props => props.color ? props.color : design.color('dark', 'lighter')};
   color: ${props => props.color ? props.color : design.color('dark', 'base')};
   box-shadow: 0px 1px 3px ${props => props.color ? props.color : design.color('dark', 'base')};
+  line-height: ${design.get('type.lineHeight.normal')};
 `
 
 export const Blockquote = (props) => (
   <BlockquoteStyles color={props.color}>
-    <h4>{props.title}</h4>
+    <h4 style={{ fontWeight: 400 }}>› {props.title}</h4>
     <p>{props.children}</p>
   </BlockquoteStyles>
 )

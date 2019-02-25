@@ -21,7 +21,8 @@ const designTokens = {
     baseFontSize: '14px',
     sizes: {
       xs: '12px',
-      s: '14px',
+      s: '13px',
+      base: '14px',
       regular: '14px',
       m: '16px',
       l: '24px',
@@ -34,16 +35,16 @@ const designTokens = {
     fontFamilyHeadings: fontFamily.serif,
 
     lineHeight: {
-      paragraph: 1.45,
+      paragraph: 1.4,
       regular: 1.4,
-      headings: 1.3
+      headings: 1.2
     },
 
     textRendering: 'optimize-legibility',
 
     letterSpacing: {
       small: '0.045rem',
-      normal: '0.0625rem',
+      normal: '0.0625em',
       large: '0.0805rem'
     },
 

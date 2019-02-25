@@ -31,15 +31,16 @@ const Code = props => (
       .editor {
         overflow: scroll;
         color: #F9FAFB;
-        background: #212B35;
+        background: #1D1F21;
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 50%;
         width: 50%;
         display: inline-block;
         font-size: 0.9rem;
-        max-height: 30rem;
+        height: 30rem;
         border-radius: 3px;
+        border: 1px solid rgba(0,0,0,0.1);
       }
 
       .preview {
@@ -51,10 +52,11 @@ const Code = props => (
         flex-shrink: 1;
         flex-basis: 50%;
         width: 50%;
-        max-height: 30rem;
+        height: 30rem;
         display: inline-block;
         vertical-align: top;
         border-radius: 3px;
+        border: 1px solid rgba(0,0,0,0.1);
       }
       `}
     </style>

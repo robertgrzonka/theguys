@@ -8,7 +8,9 @@ export default {
   dark: {
     base: '#212B35',
     light: '#454F5B',
-    lighter: '#637381'
+    bright: '#454F5B',
+    lighter: '#637381',
+    brighter: '#637381'
   },
 
   primary: {

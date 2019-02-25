@@ -47,7 +47,6 @@ export default (props) => (
       margin: 0 auto;
       max-width: 100%;
       text-rendering: ${design.get('type.textRendering')};
-      font-family: ${design.get('type.fontFamily.sans')};
       background: url('static/background.svg');
       background-size: cover;
       background-repeat: no-repeat;
@@ -56,11 +55,11 @@ export default (props) => (
     h1, h2, h3 {
       font-weight: ${design.get('type.fontWeight.headings')};
       line-height: ${design.get('type.lineHeight.headings')};
+      font-family: ${design.get('type.fontFamily.serif')};
     }
 
     h1 {
       font-size: ${design.fontSize('xxl')};
-      font-family: ${design.get('type.fontFamily.serif')};
     }
 
     h2 {
@@ -89,7 +88,7 @@ export default (props) => (
       font-family: ${design.get('type.fontFamily.sans')};
       line-height: ${design.get('type.lineHeight.paragraph')};
       font-weight: ${design.get('type.fontWeight.normal')};
-      letter-spacing: ${design.get('type.letterSpacing.large')};
+      letter-spacing: ${design.get('type.letterSpacing.normal')};
     }
 
     a:link, a:active {
@@ -98,6 +97,7 @@ export default (props) => (
       color: ${design.color('primary', 'dark')};
       font-weight: ${design.get('type.fontWeight.normal')};
       transition: all 0.3s ease;
+      font-family: ${design.get('type.fontFamily.sans')};
     }
 
     a:hover, a:visited {

@@ -1,11 +1,12 @@
 import Layout from '../components/Layout'
 import Button from '../components/Button'
-import { Blockquote, Quote, Mark } from '../components/Blockquote'
+import { Blockquote, Quote, Mark, Info } from '../components/Blockquote'
 import Input from '../components/Form'
 import { Component } from '../components/Component'
 import Examples from '../components/Examples'
 import Code from '../components/Code'
 import styled from '@emotion/styled'
+import { Title, Subtitle } from '../components/Header'
 
 const ButtonWrapper = styled.div`
   margin: 10px 0px;
@@ -199,12 +200,18 @@ export default () => (
     <Component text='Blockquotes' id='blockquotes'>
     Lorem ipsum solor domet
       <Examples>
+        <Subtitle>› Info/Note</Subtitle>
+        <Info header='Info'>
+        If not specified, <Mark>props.header</Mark> would be <Mark>Info</Mark> as default.
+        </Info>
+        <Info header='Note' color='lightblue'>
+        If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='palevioletred'>Marks</Mark> needs to be defined separately.
+        </Info>
+        <Subtitle>› Quotes</Subtitle>
         <Quote>
-       Simply testing <Mark>Quotes</Mark> and <Mark>Marks</Mark>.
+       This should be changed to real quote.
         </Quote>
-        <Quote color='turquoise'>
-        Simply testing <Mark color='turquoise'>Quotes</Mark> and <Mark color='turquoise'>Marks</Mark>.
-        </Quote>
+        <Subtitle>› Blockquotes</Subtitle>
         <Blockquote title='Styling Components'>
           This is default Blockquote.
         </Blockquote>
