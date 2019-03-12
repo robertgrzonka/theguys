@@ -2,10 +2,7 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-# [theGuys ‣ design](https://theguys.design)
 > UI components build on top of [emotion](#emotion) for [theGuys](https://theguys.sh)
-
-> **This is only the scratch of README**
 
 1. [theGuys ‣ design](#theguys--design)
    1. [Installing / Getting started](#installing--getting-started)
@@ -65,7 +62,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. [Contributions of any kind welcome](CONTRIBUTING.md)!
 
 ## License
 
