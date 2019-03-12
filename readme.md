@@ -1,4 +1,4 @@
-<img src="./static/theguysdesign-black.svg" width="250px">
+<img src="./static/theguysdesign-black.svg" width="150px">
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
 
@@ -7,112 +7,53 @@
 
 > **This is only the scratch of README**
 
-- [theGuys ‣ design](#theguys-%E2%80%A3-design)
-  - [Installing / Getting started](#installing--getting-started)
-  - [Developing](#developing)
-    - [Built With](#built-with)
-    - [Prerequisites](#prerequisites)
-    - [Setting up Dev](#setting-up-dev)
-    - [Building](#building)
-    - [Deploying / Publishing](#deploying--publishing)
-  - [Layout](#layout)
-  - [Structure](#structure)
-  - [Design](#design)
-  - [Join us!](#join-us)
-  - [Versioning](#versioning)
-  - [Configuration](#configuration)
-  - [Tests](#tests)
-  - [Style guide](#style-guide)
-  - [License](#license)
+1. [theGuys ‣ design](#theguys--design)
+   1. [Installing / Getting started](#installing--getting-started)
+   2. [Developing](#developing)
+      1. [Built With](#built-with)
+      2. [Prerequisites](#prerequisites)
+      3. [Deploying / Publishing](#deploying--publishing)
+   3. [Versioning](#versioning)
+   4. [Style guide](#style-guide)
+   5. [Contributors](#contributors)
+   6. [License](#license)
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+Use your CLI skills and go into projects destination, then use `yarn` or `npm install`.
 
 ```zsh
 cd theguysdesign
 yarn
 ```
 
-Here you should say what actually happens when you execute the code above.
-
 ## Developing
 
+All Components are included in `./components`. It's chaotic and should be changed in PR.
+
 ### Built With
-List main libraries, frameworks used including versions (React, Angular etc...)
+* React
+* Next
+* Standard
+* emotion
+* Design System Utils
+* All-Contributors
 
 ### Prerequisites
-What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
-
-
-### Setting up Dev
-
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
-```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
-```
-
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
+I think none :)
 
 ### Deploying / Publishing
-give instructions on how to build and release a new version
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
+theGuys and [me](https://github.com/robertgrzonka) use [Angular Convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines) with [Conventional Commits](https://www.conventionalcommits.org/en/) in our projects.
 
-```shell
-packagemanager deploy your-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
-  
-## Layout
-
-## Structure
-
-## Design
-
-## Join us!
+You should probably get to know [SemVer](http://semver.org).
 
 ## Versioning
 
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
-
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-## Tests
-
-N/A
+As described above: theGuys use [SemVer](http://semver.org/) for versioning.
 
 ## Style guide
 
-Explain your code style and show how to check it.
-
-## License
-
-MIT © [robertgrzonka](mailto:robert@theguys.sh)
+Soon.
 
 ## Contributors
 
@@ -123,3 +64,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+MIT © [robertgrzonka](mailto:robert@theguys.sh)
