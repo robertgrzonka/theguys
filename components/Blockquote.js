@@ -36,7 +36,8 @@ const QuoteStyles = styled.blockquote`
 
 export const Quote = (props) => (
   <QuoteStyles color={props.color}>
-    <p>{props.children}</p>
+    <p style={ {fontFamily: 'serif', fontWeight: 100 } }>„{props.quote || props.children}”</p>
+    <p style={ { textAlign: 'right', fontStyle: 'oblique', fontWeight: 100, fontSize: '0.9em' } }>{ props.author || 'unknown' }</p>
   </QuoteStyles>
 )
 

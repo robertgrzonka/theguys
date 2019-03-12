@@ -38,6 +38,7 @@ const Navigation = props => (
       <ListItem text='Headers' href='#headers' />
       <ListItem text='Buttons' href='#buttons' />
       <ListItem text='Cards' href='#cards' />
+      <ListItem text='Lists' href='#lists'/>
       <ListItem text='Code' href='#code' />
       <ListItem text='Blockquotes' href='#blockquotes' />
       <ListItem text='Forms' href='#forms' />

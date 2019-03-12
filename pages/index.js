@@ -164,9 +164,13 @@ export default () => (
     </Component>
 
     <Component text='Cards' id='cards'>
-      Lorem ipsum solor domet
+      TODO
     </Component>
 
+    <Component text='Lists' id='lists'>
+      TODO
+    </Component>
+    
     <Component text='Code' id='code'>
       Thanks to{' '}<a href='https://github.com/FormidableLabs/react-live'>React Live</a>.
       <Examples>
@@ -201,17 +205,38 @@ export default () => (
     Lorem ipsum solor domet
       <Examples>
         <Subtitle>› Info/Note</Subtitle>
+        Props:
+        <ul>
+          <li>
+            <Mark>header</Mark> defines header
+          </li>
+          <li>
+            <Mark>color</Mark> defines color
+          </li>
+        </ul>
         <Info header='Info'>
         If not specified, <Mark>props.header</Mark> would be <Mark>Info</Mark> as default.
         </Info>
         <Info header='Note' color='lightblue'>
         If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='palevioletred'>Marks</Mark> needs to be defined separately.
         </Info>
+        
         <Subtitle>› Quotes</Subtitle>
-        <Quote>
-       This should be changed to real quote.
+        Props:
+        <ul>
+          <li><Mark>quote</Mark> defines content</li>
+          <li><Mark>author</Mark> defines author</li>
+        </ul>
+        <Quote author='Yennefer z Vengerbergu'>
+          Bo w każdym z nas jest Chaos i Ład, Dobro i Zło. Ale nad tym można i trzeba zapanować. Trzeba się tego nauczyć.
         </Quote>
+        
         <Subtitle>› Blockquotes</Subtitle>
+        Props:
+        <ul>
+          <li><Mark>title</Mark> defines title</li>
+          <li><Mark>color</Mark> defines color</li>
+        </ul>
         <Blockquote title='Styling Components'>
           This is default Blockquote.
         </Blockquote>

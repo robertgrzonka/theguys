@@ -6,7 +6,8 @@
   }],
   "alias": [
     "theguys.design",
-    "design.theguys.sh"
+    "design.theguys.sh",
+    "design.theguys.app"
   ],
   "github": {
     "autoAlias": false
