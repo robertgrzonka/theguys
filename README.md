@@ -1,11 +1,8 @@
 <img src="./static/theguysdesign-black.svg" width="150px">
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-# [theGuys ‣ design](https://theguys.design)
 > UI components build on top of [emotion](#emotion) for [theGuys](https://theguys.sh)
-
-> **This is only the scratch of README**
 
 1. [theGuys ‣ design](#theguys--design)
    1. [Installing / Getting started](#installing--getting-started)
@@ -61,9 +58,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/35585466?v=4" width="150px;" alt="robertgrzonka"/><br /><sub><b>robertgrzonka</b></sub>](https://robert.theguys.sh)<br />[🚇](#infra-robertgrzonka "Infrastructure (Hosting, Build-Tools, etc)") [💻](https://github.com/robertgrzonka/theguys/commits?author=robertgrzonka "Code") |
+| :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. [Contributions of any kind welcome](CONTRIBUTING.md)!
 
 ## License
 
