@@ -45,7 +45,7 @@ I think none :)
 ### Deploying / Publishing
 theGuys and [me](https://github.com/robertgrzonka) use [Angular Convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines) with [Conventional Commits](https://www.conventionalcommits.org/en/) in our projects.
 
-You should probably get to know [SemVer](http://semver.org).
+You probably should get to know [SemVer](http://semver.org).
 
 ## Versioning
 

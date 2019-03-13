@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import design from '../designsystem/designSystem'
 
 const MarkStyles = styled.code`
-  padding: 5px 10px;
+  padding: 2px 5px;
   font-family: monospace;
   color: ${props =>
     props.color
@@ -26,7 +26,7 @@ const QuoteStyles = styled.blockquote`
   display: block;
   background-color: ${design.color('dark', 'lighter')};
   color: ${design.color('bright', 'dark')};
-  box-shadow: none;
+    box-shadow: 0px 1px 3px ${props => props.color ? props.color : design.color('dark', 'base')};
   border-left: 10px solid ${props => props.color ? props.color : design.color('dark', 'base')};
   font-size: ${design.get('type.fontSize.regular')};
   font-weight: ${design.get('type.fontWeight.light')};
@@ -36,20 +36,21 @@ const QuoteStyles = styled.blockquote`
 
 export const Quote = (props) => (
   <QuoteStyles color={props.color}>
-    <p style={ {fontFamily: 'serif', fontWeight: 100 } }>„{props.quote || props.children}”</p>
-    <p style={ { textAlign: 'right', fontStyle: 'oblique', fontWeight: 100, fontSize: '0.9em' } }>{ props.author || 'unknown' }</p>
+    <p style={ { fontFamily: 'serif', fontWeight: 100 } }>{props.quote || props.children}</p>
+    <p style={ { textAlign: 'right', fontStyle: 'oblique', fontWeight: 100, fontSize: '0.9em' } }>{ props.author }</p>
   </QuoteStyles>
 )
 
 const InfoText = styled.p`
-  font-size: 1.2rem;
+  font-size: 1em;
   font-variant-caps: all-small-caps;
   margin-top: 0;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1em;
+  line-height: 0.5em;
   color: ${props => props.color
     ? props.color
     : design.color('bright', 'darker')};
-  font-weight: 500;
+  font-weight: 900;
 `
 
 export const Info = (props) => (

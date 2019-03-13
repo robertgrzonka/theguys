@@ -3,7 +3,7 @@ import design from '../designsystem/designSystem'
 
 export const Title = styled.h1`
   color: ${design.color('dark', 'base')};
-  font-weight: ${design.get('type.fontWeight.extralight')};
+  font-weight: ${design.get('type.fontWeight.bold')};
 `
 
 export const Subtitle = styled.h3`

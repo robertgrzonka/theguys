@@ -22,7 +22,7 @@ const ButtonWrapper = styled.div`
 export default () => (
   <Layout>
     <Component text='Styled headers' id='headers'>
-      Default Header has it's styles already defined. To style it css properties should be defined as an object as <kbd>props.css</kbd> and text has to be put between opening and closing tags as follows:
+      Default Header has it's styles already defined. To style it css properties should be defined as an object as <Mark>props.css</Mark> and text has to be put between opening and closing tags as follows:
       <Examples>
         <Code code={
           `
@@ -215,10 +215,13 @@ export default () => (
           </li>
         </ul>
         <Info header='Info'>
-        If not specified, <Mark>props.header</Mark> would be <Mark>Info</Mark> as default.
+        If not specified, <Mark>props.header</Mark> would be <Mark>Note</Mark> as default.
         </Info>
         <Info header='Note' color='lightblue'>
         If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='palevioletred'>Marks</Mark> needs to be defined separately.
+        </Info>
+        <Info header='Warning!' color='crimson'>
+          Another note blockquote.
         </Info>
         
         <Subtitle>› Quotes</Subtitle>
