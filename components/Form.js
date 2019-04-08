@@ -4,7 +4,7 @@ class Input extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      placeholder: 'Write something here.',
+      placeholder: 'Hi! What is your name?',
       value: ''
     }
     this.handleChange = this.handleChange.bind(this)
@@ -34,7 +34,7 @@ class Input extends React.Component {
           </label>
           <input type='submit' value='Submit' />
         </form>
-        <p><span>State value:</span>{' '}{this.state.value}</p>
+        <p><strong>State value: </strong>{this.state.value ? `Hello, ${this.state.value}` : 'Hello, Stranger'}</p>
         <style jsx>{`
         form {
           display: flex;
