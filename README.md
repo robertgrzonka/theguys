@@ -54,6 +54,8 @@ Soon.
 
 ## Contributors
 
+> <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="ForTheBadge!" />
+
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

@@ -191,10 +191,31 @@ export default () => (
     <h1 style={{marginTop: 0, paddingTop: 30}}>
        {props.text}
     </h1>
+    
+  const Input = props => 
+    <input 
+      name='name' 
+      placeholder='What is your name?' 
+      onChange={this.handleChange}
+    />
+    
+  const Form = props => (
+    <form onSubmit={this.handleSubmit}>
+          <label>
+            <input
+              type='text'
+              placeholder='What is your name?'
+              onChange={this.handleChange}
+            />
+          </label>
+          <input type='submit' value='Submit' />
+          <Header text={ Input.value ? Input.value : 'Hello, Stranger!' } />
+    </form>
+  )
   
   render(
     <Wrapper>
-      <Header text='Hello, stranger'/>
+      <Form />
     </Wrapper>
   )
   `} />
