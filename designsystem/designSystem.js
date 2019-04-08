@@ -18,16 +18,16 @@ const palette = colorPalette
 
 const designTokens = {
   type: {
-    baseFontSize: '14px',
+    baseFontSize: '12px',
     sizes: {
-      xs: '12px',
-      s: '13px',
-      base: '14px',
-      regular: '14px',
-      m: '16px',
-      l: '24px',
-      xl: '32px',
-      xxl: '40px'
+      xs: '10px',
+      s: '11px',
+      base: '12px',
+      regular: '12px',
+      m: '14px',
+      l: '18px',
+      xl: '22px',
+      xxl: '28px'
     },
 
     fontFamily,
@@ -43,9 +43,9 @@ const designTokens = {
     textRendering: 'optimize-legibility',
 
     letterSpacing: {
-      small: '0.045rem',
+      small: '0.045em',
       normal: '0.0625em',
-      large: '0.0805rem'
+      large: '0.0805em'
     },
 
     fontWeight: {
@@ -79,8 +79,8 @@ const designTokens = {
 
   spacing: {
     baseline: 20,
-    padding: '0.3em',
-    scale: [0, 8, 16, 24, 32, 40]
+    padding: '0.4em',
+    scale: [ 0, 8, 16, 24, 32, 40 ]
   },
 
   layout: {
