@@ -15,7 +15,7 @@ export default {
 
   primary: {
     base: 'rgb(220, 20, 60)',
-    light: 'rgb(240,50,120)',
+    light: 'rgba(240,50,120, 1)',
     dark: 'rgb(160, 20, 60)'
   },
 

@@ -73,32 +73,32 @@ export default () => (
         <ButtonWrapper>
           <Button>Default</Button>
           <Button color='lightpink'>
-          Lightpink
+            Lightpink
           </Button>
           <Button color='palevioletred'>
-          Palevioletred
+            Palevioletred
           </Button>
         </ButtonWrapper>
         <ButtonWrapper>
           <Button color='Turquoise'>
-          Turqoise
+            Turqoise
           </Button>
           <Button color='royalblue'>
-          Royalblue
+            Royalblue
           </Button>
           <Button color='#EEBC1D'>
-          Gold
+            Gold
           </Button>
         </ButtonWrapper>
         <ButtonWrapper>
           <Button color='Seagreen'>
-          Seagreen
+            Seagreen
           </Button>
           <Button color='crimson'>
-          Crimson
+            Crimson
           </Button>
           <Button color='darkcyan'>
-          Darkcyan
+            Darkcyan
           </Button>
         </ButtonWrapper>
       </Examples>
@@ -107,50 +107,50 @@ export default () => (
         <ButtonWrapper>
           <Button
             className='outline'>
-          Default
+            Default
           </Button>
           <Button
             color='lightpink'
             className='outline'>
-          Lightpink
+            Lightpink
           </Button>
           <Button
             color='palevioletred'
             className='outline'>
-          Palevioletred
+            Palevioletred
           </Button>
         </ButtonWrapper>
         <ButtonWrapper>
           <Button
             color='turquoise'
             className='outline'>
-          Turqoise
+            Turqoise
           </Button>
           <Button
             color='royalblue'
             className='outline'>
-          Royalblue</Button>
+            Royalblue</Button>
           <Button
             color='#EEBC1D'
             className='outline'>
-          Gold
+            Gold
           </Button>
         </ButtonWrapper>
         <ButtonWrapper>
           <Button
             color='seagreen'
             className='outline'>
-          Seagreen
+            Seagreen
           </Button>
           <Button
             color='crimson'
             className='outline'>
-          Crimson
+            Crimson
           </Button>
           <Button
             color='darkcyan'
             className='outline'>
-          Darkcyan
+            Darkcyan
           </Button>
         </ButtonWrapper>
       </Examples>
@@ -170,11 +170,11 @@ export default () => (
     <Component text='Lists' id='lists'>
       TODO
     </Component>
-    
+
     <Component text='Code' id='code'>
-      Thanks to{' '}<a href='https://github.com/FormidableLabs/react-live'>React Live</a>.
+      Thanks to{ ' ' }<a href='https://github.com/FormidableLabs/react-live'>React Live</a>.
       <Examples>
-        <Code code={`
+        <Code code={ `
   const Wrapper = (props) => (
     <div style={{
         backgroundColor: 'palevioletred',
@@ -223,7 +223,7 @@ export default () => (
     </Component>
 
     <Component text='Blockquotes' id='blockquotes'>
-    Lorem ipsum solor domet
+      Lorem ipsum solor domet
       <Examples>
         <Subtitle>› Info/Note</Subtitle>
         Props:
@@ -236,15 +236,15 @@ export default () => (
           </li>
         </ul>
         <Info header='Info'>
-        If not specified, <Mark>props.header</Mark> would be <Mark>Note</Mark> as default.
+          If not specified, <Mark>props.header</Mark> would be <Mark>Note</Mark> as default.
         </Info>
         <Info header='Note' color='lightblue'>
-        If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='palevioletred'>Marks</Mark> needs to be defined separately.
+          If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='palevioletred'>Marks</Mark> needs to be defined separately.
         </Info>
         <Info header='Warning!' color='crimson'>
           Another note blockquote.
         </Info>
-        
+
         <Subtitle>› Quotes</Subtitle>
         Props:
         <ul>
@@ -254,7 +254,7 @@ export default () => (
         <Quote author='Yennefer z Vengerbergu'>
           Bo w każdym z nas jest Chaos i Ład, Dobro i Zło. Ale nad tym można i trzeba zapanować. Trzeba się tego nauczyć.
         </Quote>
-        
+
         <Subtitle>› Blockquotes</Subtitle>
         Props:
         <ul>
@@ -278,7 +278,7 @@ export default () => (
     </Component>
 
     <Component text='Forms' id='forms'>
-    Lorem ipsum solor domet.
+      Lorem ipsum solor domet.
       <Examples>
         <Input name='Input' />
       </Examples>

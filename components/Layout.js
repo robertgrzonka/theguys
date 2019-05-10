@@ -2,7 +2,7 @@ import Body from '../components/Body'
 import Head from 'next/head'
 import { Title, Subtitle } from '../components/Header'
 import Footer from '../components/Footer'
-import Sidebar from '../components/Sidebar'
+import { NavigationTest } from './Navigation'
 import design from '../designsystem/designSystem'
 import styled from '@emotion/styled'
 
@@ -22,18 +22,19 @@ export default (props) => (
     </Head>
     <MainHeader>
       <Title>
-          theGuys › Design
+        theGuys › Design
       </Title>
       <Subtitle>
-          React Components mini–library
+        React Components mini–library
       </Subtitle>
     </MainHeader>
+    <hr/>
     <Body>
-      <Sidebar />
-      {props.children}
+      <NavigationTest />
+      { props.children }
       <Footer />
     </Body>
-    <style jsx global>{`
+    <style jsx global>{ `
     * {
       box-sizing: border-box;
     }
@@ -95,14 +96,18 @@ export default (props) => (
       text-decoration: none;
       cursor: pointer;
       color: ${design.color('primary', 'dark')};
-      font-weight: ${design.get('type.fontWeight.normal')};
-      transition: all 0.3s ease;
       font-family: ${design.get('type.fontFamily.sans')};
+      transition: all 0.4s ease;
     }
 
     a:hover, a:visited {
       color: ${design.color('primary', 'light')};
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
+    }
+
+    hr {
+      margin-top: 150px;
+      opacity: 0.2;
     }
   `}</style>
   </div>

@@ -12,30 +12,29 @@ class Input extends React.Component {
   }
   handleChange (event) {
     this.setState({
-      placeholder: '',
       value: event.target.value
     })
   }
   handleSubmit (event) {
-    this.props.submit = this.state.value
+    alert('Nice to meet you, ' + this.state.value + '!')
     event.preventDefault()
   }
   render () {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={ this.handleSubmit }>
           <label>
             <input
               type='text'
-              placeholder={this.state.placeholder}
-              value={this.state.value}
-              onChange={this.handleChange}
+              placeholder={ this.state.placeholder }
+              value={ this.state.value }
+              onChange={ this.handleChange }
             />
           </label>
           <input type='submit' value='Submit' />
         </form>
-        <p><strong>State value: </strong>{this.state.value ? `Hello, ${this.state.value}` : 'Hello, Stranger'}</p>
-        <style jsx>{`
+        <p><strong>State value: </strong>{ this.state.value ? `Hello, ${this.state.value}` : 'Hello, Stranger' }</p>
+        <style jsx>{ `
         form {
           display: flex;
           justify-content: baseline;

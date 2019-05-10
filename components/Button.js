@@ -6,7 +6,7 @@ const white = design.color('bright')
 const dark = design.color('dark')
 
 const hover = props => css`
-    box-shadow: 0px 6px 15px ${props.color ? props.color : dark};
+    box-shadow: 0px 5px 15px ${props.color ? props.color : dark};
     color: ${props.outline ? props.color : white || dark};
 `
 
@@ -26,7 +26,7 @@ const large = css`
 const Button = styled.button`
   color: white;
   background-color: ${props => props.color || dark};
-  box-shadow: 0px 2px 7px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 7px rgba(0,0,0,0.3);
   border: 1px solid ${props => props.color || dark};
   letter-spacing: ${design.get('type.letterSpacing.small')};
   font-size: ${design.fontSize('s')};
