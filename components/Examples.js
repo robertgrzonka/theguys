@@ -29,9 +29,9 @@ export default class Examples extends React.Component {
       padding: 1.5rem;
       margin: 2rem 0;
       border-radius: 0.35rem;
-      border: 1px solid rgba(0,0,0,0.2);
-      background-color: rgb(255,255,255);
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      border: 1px solid rgb(249, 250, 251);
+      background-color: rgb(249, 250, 251);
+      box-shadow: 0 1px 3px rgba(69, 79, 91, 0.5);
       display: ${this.state.isOpen ? 'block' : 'none'};
       transition: all 0.4s ease;
       @media (max-width: 950px) {

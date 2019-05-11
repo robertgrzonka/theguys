@@ -3,7 +3,8 @@ import design from '../designsystem/designSystem'
 
 export const Title = styled.h1`
   color: ${props => props.dark ? design.color('dark', 'base') : design.color('bright', 'dark')};
-  font-weight: ${design.get('type.fontWeight.headings')};
+  font-weight: ${design.get('type.fontSize.l')};
+  font-family: ${design.get('type.fontFamily.serif')};
 `
 
 export const Subtitle = styled.h3`

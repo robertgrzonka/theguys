@@ -46,7 +46,8 @@ export default (props) => (
       align-items: stretch;
       align-content: stretch;
       margin: 0 auto;
-      max-width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
       text-rendering: ${design.get('type.textRendering')};
       background-color: ${design.color('dark', 'base')};
       background-size: cover;

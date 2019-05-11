@@ -25,9 +25,9 @@ const designTokens = {
       base: '12px',
       regular: '12px',
       m: '14px',
-      l: '18px',
-      xl: '22px',
-      xxl: '28px'
+      l: '16px',
+      xl: '20px',
+      xxl: '24px'
     },
 
     fontFamily,

@@ -19,14 +19,13 @@ export const Mark = (props) => (
 const QuoteStyles = styled.blockquote`
   width: 100%;
   margin: 30px 0;
-  padding: 20px;
-  padding-left: 25px;
-  display: block;
+  padding: 2rem;
+  display: inline-block;
   border-radius: 3px;
   background-color: ${design.color('dark', 'base')};
   color: ${design.color('bright', 'dark')};
-  box-shadow: 0px 0px 5px ${props => props.color ? props.color : design.color('dark', 'base')};
-  border-left: 1em solid ${props => props.color ? props.color : design.color('dark', 'base')};
+  box-shadow: 0px 2px 5px 'rgba(33, 43, 53, 0.5)';
+  border-left: 1rem solid ${props => props.color ? props.color : design.color('dark', 'base')};
   font-size: ${design.get('type.fontSize.regular')};
   font-weight: ${design.get('type.fontWeight.light')};
   line-height: ${design.get('type.lineHeight.regular')};
@@ -34,14 +33,14 @@ const QuoteStyles = styled.blockquote`
 `
 
 export const Quote = props => (
-  <QuoteStyles color={props.color}>
+  <QuoteStyles color={props.color} style={{borderLeft: 0}}>
     <p>{props.quote || props.children}</p>
-    <p style={ { textAlign: 'right', fontStyle: 'oblique', fontWeight: 200, fontSize: '1em' } }>— { props.author }</p>
+    <p style={ { textAlign: 'right', fontStyle: 'oblique', fontWeight: 200, fontSize: '1rem' } }>— { props.author }</p>
   </QuoteStyles>
 )
 
 const InfoText = styled.p`
-  font-size: 1em;
+  font-size: 1.1rem;
   font-variant-caps: all-small-caps;
   margin-top: 0;
   letter-spacing: 0.2em;
@@ -58,7 +57,7 @@ export const Info = props => (
 )
 
 const BlockquoteStyles = styled.blockquote`
-  margin: 0;
+  margin: 0 auto;
   padding: 5px 40px 15px 40px;
   display: block;
   background-color: ${props => props.color ? props.color : design.color('dark', 'base')};
@@ -73,13 +72,13 @@ const BorderTop = styled.div`
   margin-top: 25px;
   border-radius: 3px 3px 0px 0px;
   padding: 0;
-  filter: contrast(130%);
-  opacity: 0.8;
+  filter: contrast(150%);
 `
 
 const Wrapper = styled.div`
-  box-shadow: 0px 1px 3px ${props => props.color ? props.color : design.color('dark', 'light')};
+  box-shadow: 0px 1px 3px ${props => props.color ? props.color : 'rgba(33, 43, 53, 0.5)'};
   border-radius: 3px;
+  margin: 10px;
 `
 
 export const Blockquote = (props) => (
@@ -87,7 +86,7 @@ export const Blockquote = (props) => (
     <BorderTop color={ props.color }/>
     <BlockquoteStyles color={ props.color }>
     <p style={ { margin: '20px 0px 0px 0px', fontWeight: 500, fontSize: '1.05em' } }>{props.title}</p>
-    <p style={ { fontWeight: 300 } }>{props.children}</p>
+    <p style={ { fontWeight: 300, textAlign: 'justify' } }>{props.children}</p>
     </BlockquoteStyles>
   </Wrapper>
 )

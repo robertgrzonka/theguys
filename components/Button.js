@@ -6,7 +6,7 @@ const bright = design.color('bright', 'base')
 const dark = design.color('dark', 'base')
 
 const hover = props => css`
-    box-shadow: 0px 5px 15px ${props.color ? props.color : dark};
+    box-shadow: 0px 3px 12px ${props.color ? props.color : dark};
     color: ${props => {
   if(props.outline) {
     if(!props.darkText) {
@@ -19,7 +19,7 @@ const hover = props => css`
 const outline = props => css`
     color: ${props.color ? props.color : dark};
     background-color: ${bright};
-    border: 1px solid ${props.color ? props.color : dark};
+    border: 0.1rem solid ${props.color ? props.color : dark};
 `
 
 const large = css`
@@ -32,13 +32,13 @@ const large = css`
 const Button = styled.button`
   color: ${props => props.darkText ? dark : bright};
   background-color: ${props => !props.outline && props.color ? props.color : dark};
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.35);
-  border: 1px solid ${props => props.color ? props.color : dark};
+  box-shadow: 0px 1px 3px rgba(33, 43, 53, 0.5);
+  border: 0.1rem solid ${props => props.color ? props.color : dark};
   letter-spacing: ${design.get('type.letterSpacing.small')};
   font-size: ${design.fontSize('s')};
   min-height: 35px;
   min-width: 100px;
-  font-weight: ${design.get('type.fontWeight.medium')};
+  font-weight: ${design.get('type.fontWeight.regular')};
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 3px;

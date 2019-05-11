@@ -6,7 +6,7 @@ import { Component } from '../components/Component'
 import Examples from '../components/Examples'
 import Code from '../components/Code'
 import styled from '@emotion/styled'
-import { Title, Subtitle } from '../components/Header'
+import { Subtitle } from '../components/Header'
 
 const ButtonWrapper = styled.div`
   margin: 10px 0px;
@@ -172,7 +172,6 @@ export default () => (
     </Component>
 
     <Component text='Code' id='code'>
-      Thanks to{ ' ' }<a href='https://github.com/FormidableLabs/react-live'>React Live</a>.
       <Examples>
         <Code code={ `
   const Wrapper = (props) => (
@@ -223,7 +222,6 @@ export default () => (
     </Component>
 
     <Component text='Blockquotes' id='blockquotes'>
-      Lorem ipsum solor domet
         <Subtitle className='blockquotes' dark>Info/Note</Subtitle>
         Props:
         <ul>
@@ -237,8 +235,8 @@ export default () => (
         <Info header='Info'>
           If not specified, <Mark>props.header</Mark> would be <Mark>Note</Mark> as default.
         </Info>
-        <Info header='Note' color='lightblue'>
-          If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='lightblue'>Marks</Mark> needs to be defined separately.
+        <Info header='Note' color='cornflowerblue'>
+        If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='cornflowerblue'>Marks</Mark> needs to be defined separately.
         </Info>
         <Info header='Warning!' color='crimson'>
           Another note blockquote.
