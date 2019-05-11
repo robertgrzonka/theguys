@@ -25,18 +25,18 @@ const QuoteStyles = styled.blockquote`
   border-radius: 3px;
   background-color: ${design.color('dark', 'base')};
   color: ${design.color('bright', 'dark')};
-  box-shadow: 0px 3px 5px ${props => props.color ? props.color : design.color('dark', 'base')};
+  box-shadow: 0px 0px 5px ${props => props.color ? props.color : design.color('dark', 'base')};
   border-left: 1em solid ${props => props.color ? props.color : design.color('dark', 'base')};
   font-size: ${design.get('type.fontSize.regular')};
-  font-weight: ${design.get('type.fontWeight.normal')};
+  font-weight: ${design.get('type.fontWeight.light')};
   line-height: ${design.get('type.lineHeight.regular')};
   position: relative;
 `
 
-export const Quote = (props) => (
+export const Quote = props => (
   <QuoteStyles color={props.color}>
-    <p style={ { fontFamily: 'serif', fontWeight: 200 } }>{props.quote || props.children}</p>
-    <p style={ { textAlign: 'right', fontStyle: 'oblique', fontWeight: 200, fontSize: '1em' } }>{ props.author }</p>
+    <p>{props.quote || props.children}</p>
+    <p style={ { textAlign: 'right', fontStyle: 'oblique', fontWeight: 200, fontSize: '1em' } }>— { props.author }</p>
   </QuoteStyles>
 )
 
@@ -50,7 +50,7 @@ const InfoText = styled.p`
   font-weight: 900;
 `
 
-export const Info = (props) => (
+export const Info = props => (
   <QuoteStyles color={props.color}>
     <InfoText color={props.color}>{props.header || 'Note'}</InfoText>
     {props.children}
@@ -58,19 +58,36 @@ export const Info = (props) => (
 )
 
 const BlockquoteStyles = styled.blockquote`
-  margin: 25px 0;
+  margin: 0;
   padding: 5px 40px 15px 40px;
   display: block;
   background-color: ${props => props.color ? props.color : design.color('dark', 'base')};
-  border-top: 20px solid ${props => props.color ? props.color : design.color('dark', 'light')};
   color: ${props => props.color ? design.color('dark', 'base') : design.color('bright', 'dark')};
-  box-shadow: 0px 1px 3px ${props => props.color ? props.color : design.color('dark', 'light')};
   line-height: ${design.get('type.lineHeight.normal')};
+  border-radius: 0px 0px 3px 3px;
+  font-weight: ${design.get('type.fontWeight.regular')};
+`
+
+const BorderTop = styled.div`
+  border-top: 20px solid ${props => props.color ? props.color : design.color('dark', 'base')};
+  margin-top: 25px;
+  border-radius: 3px 3px 0px 0px;
+  padding: 0;
+  filter: contrast(130%);
+  opacity: 0.8;
+`
+
+const Wrapper = styled.div`
+  box-shadow: 0px 1px 3px ${props => props.color ? props.color : design.color('dark', 'light')};
+  border-radius: 3px;
 `
 
 export const Blockquote = (props) => (
-  <BlockquoteStyles color={props.color}>
-    <h4 style={ { marginBottom: 10} }>{props.title}</h4>
-    <p>{props.children}</p>
-  </BlockquoteStyles>
+  <Wrapper>
+    <BorderTop color={ props.color }/>
+    <BlockquoteStyles color={ props.color }>
+    <p style={ { margin: '20px 0px 0px 0px', fontWeight: 500, fontSize: '1.05em' } }>{props.title}</p>
+    <p style={ { fontWeight: 300 } }>{props.children}</p>
+    </BlockquoteStyles>
+  </Wrapper>
 )

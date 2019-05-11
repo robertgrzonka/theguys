@@ -1,4 +1,4 @@
-import NavigationLinks from './NavigationLinks'
+import Link from 'next/link'
 import design from '../designsystem/designSystem'
 import styled from '@emotion/styled'
 import Button from './Button'
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   max-height: 75px;
   top: 0;
   left: 0;
-  background: rgba(33, 43, 53, 0.9);
+  background: rgba(33, 43, 53, 0.95);
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
@@ -38,8 +38,32 @@ const Wrapper = styled.div`
 
 const modalStyle = {
   padding: '10px 30px',
-  marginRight: '50px'
+  marginRight: '50px',
+  width: '150px'
 }
+
+const LinkStyles = styled.li`
+      text-decoration: none;
+      cursor: pointer;
+      color: ${design.color('primary', 'dark')};
+      font-family: ${design.get('type.fontFamily.sans')};
+      margin: 20px 10px;
+      transition: all 0.4s ease;
+      &:hover {
+        color: ${design.color('primary', 'light')};
+        transition: all 0.4s ease;
+      }
+`
+
+const ListItem = props => (
+  <Link href={ props.href }>
+    <LinkStyles { ...props }>{ props.text }</LinkStyles>
+  </Link>
+)
+
+const ListItems = [
+  'Headers', 'Buttons', 'Cards', 'Lists', 'Code', 'Blockquotes', 'Forms'
+]
 
 export class NavigationTest extends React.Component {
   constructor () {
@@ -68,10 +92,21 @@ export class NavigationTest extends React.Component {
     const showModal = this.state.showModal
     let button
     { showModal ? (
-      button = <Button onClick={ this.handleCloseModal } color={ 'palevioletred' } style={ modalStyle }>Close</Button>
+      button = <Button onClick={ this.handleCloseModal } color={ 'palevioletred' } style={ modalStyle }>Close menu</Button>
     ): (
-        button = <Button onClick={ this.handleOpenModal } style={ modalStyle } color={ 'rgb(249, 250, 251)' } darkText>Menu</Button>
-    )}
+      button = <Button onClick={ this.handleOpenModal } style={ modalStyle } color={ 'rgb(249, 250, 251)' } darkText>Open menu</Button>
+      )
+    }
+    
+
+    const NavigationLinks = () => ListItems.map(item => {
+      return <ListItem
+        text={ item }
+        href={ '#' + item.toLowerCase() }
+        key={ ListItems.findIndex(item => item) }
+        onClick={ this.handleCloseModal }
+      />
+    })
 
     return (
       <Wrapper>
@@ -92,12 +127,12 @@ export class NavigationTest extends React.Component {
               right: '50px',
               left: 'auto',
               bottom: 'auto',
-              textAlign: 'center',
+              textAlign: 'center'
             }
           }}
         >
           <ModalList>
-            <NavigationLinks />
+            <NavigationLinks/>
           </ModalList>
         </Modal>
       </Wrapper>

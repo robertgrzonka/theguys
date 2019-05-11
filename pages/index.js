@@ -68,7 +68,7 @@ export default () => (
     </Component>
 
     <Component text='Buttons' id='buttons'>
-      <Quote>Buttons below are wrapped by <Mark>ButtonWrapper</Mark> which tells them to be more wide. In default they've got paddings and are not much bigger.</Quote>
+      <Blockquote>Buttons below are wrapped by <Mark>ButtonWrapper</Mark> which tells them to be more wide. In default they've got paddings and are not much bigger.</Blockquote>
       <Examples>
         <ButtonWrapper>
           <Button>Default</Button>
