@@ -224,8 +224,7 @@ export default () => (
 
     <Component text='Blockquotes' id='blockquotes'>
       Lorem ipsum solor domet
-      <Examples>
-        <Subtitle>› Info/Note</Subtitle>
+        <Subtitle className='blockquotes' dark>Info/Note</Subtitle>
         Props:
         <ul>
           <li>
@@ -239,13 +238,13 @@ export default () => (
           If not specified, <Mark>props.header</Mark> would be <Mark>Note</Mark> as default.
         </Info>
         <Info header='Note' color='lightblue'>
-          If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='palevioletred'>Marks</Mark> needs to be defined separately.
+          If <Mark>props.color</Mark> was specified in <Mark>Info</Mark> component, header would be the same color as left border. But <Mark color='lightblue'>Marks</Mark> needs to be defined separately.
         </Info>
         <Info header='Warning!' color='crimson'>
           Another note blockquote.
         </Info>
 
-        <Subtitle>› Quotes</Subtitle>
+        <Subtitle className='blockquotes' dark>Quotes</Subtitle>
         Props:
         <ul>
           <li><Mark>quote</Mark> defines content</li>
@@ -255,7 +254,7 @@ export default () => (
           Bo w każdym z nas jest Chaos i Ład, Dobro i Zło. Ale nad tym można i trzeba zapanować. Trzeba się tego nauczyć.
         </Quote>
 
-        <Subtitle>› Blockquotes</Subtitle>
+        <Subtitle className='blockquotes' dark>Blockquotes</Subtitle>
         Props:
         <ul>
           <li><Mark>title</Mark> defines title</li>
@@ -274,7 +273,6 @@ export default () => (
         </Blockquote>
         <Blockquote title='Lorem Ipsum' color='crimson'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque.'
         </Blockquote>
-      </Examples>
     </Component>
 
     <Component text='Forms' id='forms'>

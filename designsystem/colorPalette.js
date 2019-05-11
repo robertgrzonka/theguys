@@ -1,13 +1,13 @@
 export default {
   bright: {
-    base: '#F9FAFB',
+    base: 'rgb(249, 250, 251)',
     dark: '#F4F6F8',
     darker: '#DFE4E8'
   },
 
   dark: {
-    base: '#212B35',
-    light: '#454F5B',
+    base: 'rgb(33, 43, 53)',
+    light: 'rgb(69, 79, 91)',
     bright: '#454F5B',
     lighter: '#637381',
     brighter: '#637381'

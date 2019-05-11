@@ -7,7 +7,7 @@ import React from 'react'
 
 const Logo = styled.h3`
   margin-left: 100px;
-  color: ${design.color('dark')};
+  color: ${design.color('bright', 'dark')};
   font-family: ${design.get('type.fontFamily.serif')};
 `
 
@@ -22,17 +22,17 @@ const Wrapper = styled.div`
   display: flex;
   position: fixed;
   width: 100vw;
-  height: 75px;
+  max-height: 75px;
   top: 0;
   left: 0;
-  background: rgba(255,255,255,0.9);
+  background: rgba(33, 43, 53, 0.9);
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
   z-index: 100;
   transition: all 0.4s ease;
   &:hover {
-    background: white;
+    background: ${design.color('dark','base')};
   }
 `
 
@@ -68,9 +68,9 @@ export class NavigationTest extends React.Component {
     const showModal = this.state.showModal
     let button
     { showModal ? (
-      button = <Button onClick={ this.handleCloseModal } color={ 'palevioletred' } style={ modalStyle }>Close menu</Button>
+      button = <Button onClick={ this.handleCloseModal } color={ 'palevioletred' } style={ modalStyle }>Close</Button>
     ): (
-      button = <Button onClick={ this.handleOpenModal } style={ modalStyle }>Open menu</Button>
+        button = <Button onClick={ this.handleOpenModal } style={ modalStyle } color={ 'rgb(249, 250, 251)' } darkText>Menu</Button>
     )}
 
     return (
@@ -84,10 +84,10 @@ export class NavigationTest extends React.Component {
           onRequestClose={this.handleCloseModal}
           style={{
             overlay: {
-              backgroundColor: 'rgba(255,255,255,0.9)',
+              backgroundColor: 'rgba(69, 79, 91, 0.9)',
             },
             content: {
-              backgroundColor: 'white',
+              backgroundColor: 'rgb(249, 250, 251)',
               top: '90px',
               right: '50px',
               left: 'auto',

@@ -2,18 +2,24 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import design from '../designsystem/designSystem'
 
-const white = design.color('bright')
-const dark = design.color('dark')
+const bright = design.color('bright', 'base')
+const dark = design.color('dark', 'base')
 
 const hover = props => css`
     box-shadow: 0px 5px 15px ${props.color ? props.color : dark};
-    color: ${props.outline ? props.color : white || dark};
+    color: ${props => {
+  if(props.outline) {
+    if(!props.darkText) {
+      return bright
+    }
+    return dark
+  }}};
 `
 
 const outline = props => css`
-    color: ${props.color || dark};
-    background-color: white;
-    border: 1px solid ${props.color || dark};
+    color: ${props.color ? props.color : dark};
+    background-color: ${bright};
+    border: 1px solid ${props.color ? props.color : dark};
 `
 
 const large = css`
@@ -24,19 +30,19 @@ const large = css`
 `
 
 const Button = styled.button`
-  color: white;
-  background-color: ${props => props.color || dark};
-  box-shadow: 0px 3px 7px rgba(0,0,0,0.3);
-  border: 1px solid ${props => props.color || dark};
+  color: ${props => props.darkText ? dark : bright};
+  background-color: ${props => !props.outline && props.color ? props.color : dark};
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.35);
+  border: 1px solid ${props => props.color ? props.color : dark};
   letter-spacing: ${design.get('type.letterSpacing.small')};
   font-size: ${design.fontSize('s')};
   min-height: 35px;
   min-width: 100px;
-  font-weight: ${design.get('type.fontWeight.normal')};
+  font-weight: ${design.get('type.fontWeight.medium')};
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 3px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   &:hover {
     ${hover}
   }

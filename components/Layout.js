@@ -21,10 +21,10 @@ export default (props) => (
       <link href='https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&subset=latin-ext' rel='stylesheet' />
     </Head>
     <MainHeader>
-      <Title>
+      <Title style={{ marginBottom: 0 }}>
         theGuys › Design
       </Title>
-      <Subtitle>
+      <Subtitle style={{marginTop: 10 }}>
         React Components mini–library
       </Subtitle>
     </MainHeader>
@@ -48,7 +48,7 @@ export default (props) => (
       margin: 0 auto;
       max-width: 100%;
       text-rendering: ${design.get('type.textRendering')};
-      background: url('static/background.svg');
+      background-color: ${design.color('dark', 'base')};
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -108,6 +108,26 @@ export default (props) => (
     hr {
       margin-top: 150px;
       opacity: 0.2;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    
+    .ReactModal__Overlay {
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .ReactModal__Overlay--after-open{
+      opacity: 1;
+    }
+    
+    .ReactModal__Overlay--before-close{
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    
+    .blockquotes {
+      padding: 30px 0px 10px 0px;
+      border-bottom: 1px solid rgba(33, 43, 53, 0.3);
     }
   `}</style>
   </div>
