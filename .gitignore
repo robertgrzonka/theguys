@@ -91,3 +91,4 @@ $RECYCLE.BIN/
 
 # next.js build output
 .next
+.vercel

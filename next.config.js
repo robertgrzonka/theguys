@@ -1,4 +1,4 @@
 module.exports = {
-  pageExtensions: ['jsx', 'js'],
-  target: 'serverless'
-}
+  pageExtensions: ["jsx", "js"],
+  target: "serverless",
+};
