@@ -2,7 +2,7 @@
   "name": "theguysdesign",
   "description": "Mini UI React components library",
   "version": "1.0.0",
-  "author": "robertgrzonka <robert@theguys.sh> (https://theguys.sh/)",
+  "author": "robertgrzonka <robert@theguys.dev> (https://theguys.dev/)",
   "license": "MIT",
   "private": true,
   "dependencies": {
